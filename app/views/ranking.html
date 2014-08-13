@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">My points</h3>
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<span class="badge">{{allRanking.me.points}}</span>
+				<strong>#{{allRanking.me.position}}</strong>: {{allRanking.me.name}}
+			</li>
+		</ul>
+		<div class="input-group input">
+			<span class="input-group-addon glyphicon glyphicon-search"></span>
+			<input type="text" class="form-control" placeholder="Search" ng-model="search">
+		</div>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Leader Board</h3>
+	</div>
+	<div class="panel-body">
+		<ol class="list-group">
+			<li class="list-group-item" ng-repeat="rank in allRanking.ranking | filter:search">
+				<span class="badge">{{rank.points}}</span>
+				<strong>#{{rank.position}}</strong>: {{rank.name}}
+			</li>
+		</ol>
+	</div>
+</div>

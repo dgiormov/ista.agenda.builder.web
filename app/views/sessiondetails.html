@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Session</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col col-sm-12 col-md-6"><h1 class="session-name">{{session.name}}</h1>
+				<ol ng-repeat="speaker in session.speakers">
+					<li>{{speaker.name}}</li>
+				</ol>
+			</div>
+			<div class="col col-sm-12 col-md-6">
+				<div class="row">
+					<strong class="col">When</strong>
+					<div class="c -width-2-5ol">{{session.startTimeString}} ({{session.duration}} min.)</div>
+				</div>
+				<div class="row">
+					<strong class="col">Where</strong>
+					<div class="col">{{session.room}}</div>
+				</div>
+				<div class="row">Rate this session</div>
+			</div>
+		</div>
+		<p>Learn from Android experts about how to setup your Android development environment using Android Studio and Gradle. Create your first project and run your Android app on an emulator or device. Capacity: 10 people.</p>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Comments</h3>
+	</div>
+	<div class="panel-body">
+		<ol class="list-group">
+			<li class="list-group-item" ng-repeat="comment in comments">
+				<span class="badge">{{comment.likes}}</span>
+				<h4 class="list-group-item-heading">{{comment.name}}</h4>
+				<p class="list-group-item-text">{{comment.text}}</p>
+			</li>
+		</ol>
+		<div class="input-group">
+			<textarea class="form-control" rows="3"></textarea>
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">Post</button>
+			</span>
+		</div>
+	</div>
+</div>

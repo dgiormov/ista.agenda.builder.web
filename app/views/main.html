@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Agenda</h3>
+	</div>
+	<div class="panel-body">
+<div class="list-group">
+  <a ng-href="#/sessions/{{session.id}}" class="list-group-item" ng-repeat="session in sessions">
+    <h4 class="list-group-item-heading">{{session.name}}</h4>
+  </a>
+</div>
+</div>
