@@ -67,9 +67,25 @@ body {
 }
 
 .session-name {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .content {
-  padding: 20px;
+    padding: 20px;
+}
+
+.login {
+    padding-right: 30px;
+}
+
+.fa.fa-twitter {
+    color:#00A7E7;
+}
+
+.fa.fa-facebook-square {
+    color:#3662A0;
+}
+
+.fa.fa-google-plus-square {
+    color: #D74634;
 }
