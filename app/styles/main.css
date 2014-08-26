@@ -2,7 +2,7 @@
     .side-nav {
         position: fixed;
         top: 51px;
-        background-color: #222;
+        background-color: #FFF;
         left: 225px;
         width: 225px;
         margin-left: -225px;
@@ -22,6 +22,10 @@
     }
 }
 
+.panel {
+    border: 0;
+}
+
 .side-nav>li>ul {
     padding: 0;
 }
@@ -38,7 +42,7 @@
 }
 
 body {
-    background-color: #222;
+    background-color: #FFF;
 }
 
 #wrapper {
