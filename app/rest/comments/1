@@ -1,0 +1,23 @@
+[
+    {
+        "id": 2024,
+        "name": "Darth Vader",
+        "text": "test",
+        "likes": 0,
+        "likedBy": ""
+    },
+    {
+        "id": 2379,
+        "name": "Emperor Palpatine",
+        "text": "Cannot wait",
+        "likes": 1,
+        "likedBy": "Darth Vader"
+    },
+    {
+        "id": 2386,
+        "name": "Princess Leia",
+        "text": "Проба, проба, 1,2,3...работи микрофона;-)",
+        "likes": 1,
+        "likedBy": "Han Solo"
+    }
+]
