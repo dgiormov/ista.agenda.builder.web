@@ -9,5 +9,5 @@
  */
 angular.module('istaAngularApp')
   .service('sessionDetails', function sessionDetails($resource) {
-  	return $resource('rest/sessions1/:id');
+  	return $resource('rest/sessions/:id');
   });

@@ -37,9 +37,9 @@
 			</li>
 		</ol>
 		<div class="input-group">
-			<textarea class="form-control" rows="3"></textarea>
+		      <textarea class="form-control" rows="3" ng-model="comment"></textarea>
 			<span class="input-group-btn">
-				<button class="btn btn-default" type="button">Post</button>
+		        <button class="btn btn-default" type="button" ng-click="onSave()">Post</button>
 			</span>
 		</div>
 	</div>
