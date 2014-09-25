@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     watch: {
       bower: {
         files: ['bower.json'],
-        tasks: ['wiredep']
+        tasks: ['wiredep',]
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
@@ -45,8 +45,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.scss'],
+        tasks: ['newer:copy:styles', 'autoprefixer', 'sass']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -157,6 +157,18 @@ module.exports = function (grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
+      }
+    },
+
+    // Sass
+    sass: {
+      dist: {
+        options: {
+          style: 'compressed',
+        },
+        files: {
+          'app/styles/main.css': 'app/styles/main.scss',
+        }
       }
     },
 
