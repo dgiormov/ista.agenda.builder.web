@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
 </head>
 <body ng-app="istaAngularApp">
@@ -27,22 +28,35 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="menu-title">MENU</span>
+                    <div class="icon-bar-wrap">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+
                 </button>
-                <a class="navbar-brand" href="#">ISTA 2014 agenda</a>
+                <a class="navbar-brand" href="#">ISTA 2014</a>
             </div>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
                 <ul class="nav navbar-nav side-nav">
                     <li class="sidebar-brand">
+                        <div class="icon-holder">
+                            <i class="fa fa-list-alt"></i>
+                        </div>
                         <a href="#">Agenda</a>
                     </li>
                     <li>
+                        <div class="icon-holder">
+                            <i class="fa fa-code"></i>
+                        </div>
                         <a href="#/codes">Codes</a>
                     </li>
                     <li>
+                        <div class="icon-holder">
+                            <i class="fa fa-user"></i>
+                        </div>
                         <a href="#/ranking">Ranking</a>
                     </li>
                 </ul>
