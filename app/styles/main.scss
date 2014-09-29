@@ -8,12 +8,12 @@ $highlighter-app: #43dd90;
 $highlighter-positive: #71e4aa;
 $highlighter-neutral: #d5d5d5;
 
-$track-1: #30cbef;
-$track-2: #f44a6e;
-$track-3: #ef6f18;
+$track-1-color: #30cbef;
+$track-2-color: #f44a6e;
+$track-3-color: #ef6f18;
 
 $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
-$dash: 1px solid rgba(0,0,0,0.05);
+$dash: 2px solid rgba(0,0,0,0.05);
 
 body {
     background-color: #fff; 
@@ -93,6 +93,107 @@ body {
     }
 }
 
+.panel-body {
+    padding: 0;
+}
+
+/* AGENDA LIST-ITEMS */
+
+.list-group-item.track-1 {
+
+    & .track-marker {
+        background-color: $track-1-color;
+    }
+
+    & h3.list-group-track {
+        color: $track-1-color;
+    }
+
+}
+
+.list-group-item {
+    margin: 3px 0 0 0;
+    padding: 10px;
+    border-radius: 0;
+    color: $body-dark;
+    background-color: $main-background;
+    min-height: 110px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: $dash;
+
+    &:first-child {
+        border-radius: 0;
+        margin-top: 13px;
+    }
+
+    & .track-marker {
+        min-height: 110px;
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: -2px;
+        border-bottom: $dash;
+    }
+
+    & h5.list-group-speaker { 
+        position: relative;
+        margin: 0;
+        font-size: 1em;
+    }
+
+    & h4.list-group-item-heading {
+        font-weight: bold;
+        font-size: 1.25em;
+        min-height: 65px;
+    }
+
+    & h4.list-group-item-heading,
+    & h5.list-group-speaker { 
+        color: $body-dark;
+        width: 65%;
+        display: inline-block;
+    }
+
+    & h3.list-group-track {
+        float: right;
+        display: inline-block;
+        font-size: 1.35em;
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-weight: bold;
+    }
+
+    .add-session {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        position: relative;
+        float: right;
+        margin-right: 10px;
+        text-align: center;
+
+        &.not-added {
+            background-color: $highlighter-neutral;
+        }
+
+        &.session-added {
+            background-color: $highlighter-positive;
+        }
+
+        & .fa {
+            color: #fff;
+            font-size: 1.5em;
+            line-height: 35px;
+        }
+    }
+
+
+}
 
 
 .menu-title {
