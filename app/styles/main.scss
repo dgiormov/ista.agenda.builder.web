@@ -1,7 +1,7 @@
 $body-dark: #3d3d3d;
 $body-gray: #848484;
 
-$main-background: #f9f9f9;
+$main-background: #ECECEC;
 $secondary-background: #efefef;
 
 $highlighter-app: #43dd90;
@@ -12,11 +12,13 @@ $track-1-color: #30cbef;
 $track-2-color: #f44a6e;
 $track-3-color: #ef6f18;
 
+$ista-brand-1: #0099b1;
+
 $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
-$dash: 2px solid rgba(0,0,0,0.05);
+$dash: 2px solid rgba(0,0,0,0.12);
 
 body {
-    background-color: #fff; 
+    background-color: $main-background; 
     font-family: 'PT Sans', 'Arial', 'Helvetica' sans-serif;
 }
 
@@ -24,12 +26,44 @@ body {
 
 .navbar-default {
 
-    background-color: $main-background;
+    border: none;
 
+    & .navbar-collapse {
+        border: none;
+        box-shadow: none;
+
+        &.collapse.in:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.5);
+            height: 500%;
+        }
+    }
+
+    & .navbar-brand {
+        color: #fff;
+        padding: 10px;
+        height: 45px;
+        font-size: 20px;
+        line-height: 28px;
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    & .navbar-header {
+        background-color: $ista-brand-1;
+        border-bottom: $dash;
+    }
 
     & .navbar-nav {
 
-        background-color: #fff;
+        margin: 0px -15px;
+        background-color: $main-background;
 
         & li > a {
             color: $body-dark;
@@ -40,9 +74,9 @@ body {
         }
 
         & li {
-            background-color: $main-background;
+            background-color: #fff;
             border-bottom: $dash;
-            margin-bottom: 1px;
+            margin-bottom: 3px;
 
             & .icon-holder {
                 background-color: $highlighter-positive;
@@ -53,23 +87,83 @@ body {
                 float: left;
                 width: 40px;
                 margin-right: 10px;
+                border-bottom: $dash;
             }
         }
 
         &:hover,
         &:focus {
-            color: $body-dark;
+            color: #fff;
+        }
+
+        &.login {
+
+            margin: 0px -15px 0 -15px;
+            min-width: 280px;
+
+            & li {
+                display: inline-block;
+                width: 17%;
+                margin-right: -4px;
+                text-align: center;
+                border-bottom: none;
+
+                & a {
+                    width: 100%;
+                    border-bottom: $dash;
+
+                    & .fa {
+                        color: #fff;
+                    }
+
+                    &.facebook-login {
+                        background-color: #3b5998;
+                    }
+
+                    &.twitter-login {
+                        background-color: #55acee;
+                    }
+
+                    &.gplus-login {
+                        background-color: #dd4b39;
+                    }
+
+                    &.linkedin-login {
+                        background-color: #0976b4;
+                    }                                        
+
+                }
+            }
+
+            & .login-holder {
+                width: 95px;
+                text-align: center;
+                font-size: 1.1em;
+                font-weight: bold;
+                background-color: $highlighter-positive;
+                color: #fff;
+                text-shadow: $main-shadow;
+                padding: 15px 0;
+                line-height: 20px;
+                float: left;
+                border-bottom: $dash;
+            }
         }
     }
 
-    & .navbar-toggle {
 
+
+
+    & .navbar-toggle {
+        
+        padding: 10px;
         margin: 5px 10px;
         border: none;
+        color: #fff;
 
         &:hover,
         &:focus { 
-            background-color: $highlighter-app;
+            background-color: rgba(0,0,0,0.15);
             color: #fff;
             & .icon-bar {
                 background-color: #fff;
@@ -84,7 +178,7 @@ body {
         & .icon-bar {
             height: 4px;
             border-radius: 2px;
-            background-color: $body-dark;
+            background-color: #fff;
         }
 
         & .icon-bar + .icon-bar {
@@ -94,7 +188,7 @@ body {
 }
 
 .panel-body {
-    padding: 0;
+    background-color: $main-background;
 }
 
 /* AGENDA LIST-ITEMS */
@@ -111,21 +205,26 @@ body {
 
 }
 
+.list-group {
+    background-color: $main-background;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .list-group-item {
-    margin: 3px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 10px;
     border-radius: 0;
     color: $body-dark;
-    background-color: $main-background;
+    background-color: #fff;
     min-height: 110px;
-    border-top: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     border-left: none;
     border-right: none;
     border-bottom: $dash;
 
     &:first-child {
         border-radius: 0;
-        margin-top: 13px;
     }
 
     & .track-marker {
@@ -195,7 +294,6 @@ body {
 
 }
 
-
 .menu-title {
     float: left;
     display: inline-block;
@@ -208,15 +306,10 @@ body {
     float: left;
 }
 
-.navbar-brand {
-    padding: 10px;
-    height: 45px;
-    font-size: 20px;
-    line-height: 28px;
-}
-
 .panel {
     border: 0;
+    background-color: inherit;
+    box-shadow: none;
 }
 
 .side-nav>li>ul {
@@ -241,7 +334,6 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #fff;
 }
 
 .huge {
@@ -258,24 +350,13 @@ body {
     padding: 20px;
 }
 
-.login {
-    padding-right: 30px;
-}
-
-.fa.fa-twitter {
-    color:#00A7E7;
-}
-
-.fa.fa-facebook-square {
-    color:#3662A0;
-}
-
-.fa.fa-google-plus-square {
-    color: #D74634;
-}
 
 
 @media(min-width:768px) {
+
+    .login {
+        padding-right: 30px;
+    }
 
     #wrapper {
         padding-left: 225px;
@@ -289,7 +370,7 @@ body {
         position: fixed;
         top: 51px;
         background-color: #FFF;
-        left: 225px;
+        left: 15px;
         width: 225px;
         margin-left: -225px;
         border: none;

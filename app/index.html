@@ -40,6 +40,19 @@
             </div>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="navbar-collapse navbar-ex1-collapse collapse" style="height: 1px;">
+
+                <ul class="nav navbar-nav navbar-right login" ng-hide="logged">
+                    <div class="login-holder">Login with:</div>
+                    <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right login" ng-show="logged">
+                    <div class="logged-holder">Hello {{username}}<a href="logout">Logout</a></li>
+                </ul>
+
                 <ul class="nav navbar-nav side-nav">
                     <li class="sidebar-brand">
                         <div class="icon-holder">
@@ -60,15 +73,7 @@
                         <a href="#/ranking">Ranking</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right login" ng-hide="logged">
-                    <li><a href="authorize?provider=facebook"><i class="fa fa-facebook-square"></i> Facebook</a></a></li>
-                    <li><a href="authorize?provider=twitter"><i class="fa fa-twitter"></i> Twitter</a></a></li>
-                    <li><a href="authorize?provider=google"><i class="fa fa-google-plus-square"></i> Google</a></a></li>
-                    <li><a href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a></a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right login" ng-show="logged">
-                    <li>Hello {{username}}<a href="logout">Logout</a></li>
-                </ul>
+
             </div>
         </nav>
         <div id="page-wrapper" class="container-fluid" ng-view=""></div>
