@@ -32,15 +32,27 @@ body {
         border: none;
         box-shadow: none;
 
+        /* outer-content fader */
         &.collapse.in:after {
             content: '';
             display: block;
             position: absolute;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.5);
-            height: 500%;
+            background: rgba(255, 255, 255, 0.65);
+            height: 500px;
+            transform-origin: top;
+            transform: translateY(-1000px);
+            transition: 0.25s;
+            opacity: 0;
         }
+
+        &.collapse.in:after {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+
     }
 
     & .navbar-brand {
@@ -76,7 +88,7 @@ body {
         & li {
             background-color: #fff;
             border-bottom: $dash;
-            margin-bottom: 3px;
+            margin-bottom: 0px;
 
             & .icon-holder {
                 background-color: $highlighter-positive;
@@ -97,7 +109,8 @@ body {
         }
 
         &.login {
-
+    
+            background-color: $highlighter-positive;
             margin: 0px -15px 0 -15px;
             min-width: 280px;
 
@@ -147,6 +160,27 @@ body {
                 line-height: 20px;
                 float: left;
                 border-bottom: $dash;
+            }
+
+            & .logged-holder {
+                width: 100%;
+                text-align: left;
+                font-size: 1.1em;
+                font-weight: bold;
+                background-color: $highlighter-positive;
+                color: #fff;
+                text-shadow: $main-shadow;
+                padding: 15px 10px;
+                line-height: 20px;
+                float: left;
+                border-bottom: $dash;
+
+                & a[href="logout"] {
+                    color: #fff;
+                    float: right;
+                    text-transform: uppercase;
+                    font-size: 1em;
+                }
             }
         }
     }
