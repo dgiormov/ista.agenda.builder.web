@@ -30,10 +30,11 @@
 	</div>
 	<div class="panel-body">
 		<ol class="list-group">
-			<li class="list-group-item" ng-repeat="comment in comments">
+			<li class="list-group-item list-group-comment" ng-repeat="comment in comments">
 				<span class="badge">{{comment.likes}}</span>
 				<h4 class="list-group-item-heading">{{comment.name}}</h4>
 				<p class="list-group-item-text">{{comment.text}}</p>
+				<div class="comment-marker"></div>
 			</li>
 		</ol>
 		<div class="input-group">

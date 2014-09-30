@@ -6,7 +6,7 @@ $secondary-background: #efefef;
 
 $highlighter-app: #43dd90;
 $highlighter-positive: #71e4aa;
-$highlighter-neutral: #d5d5d5;
+$highlighter-neutral: #d2d2d2;
 
 $track-1-color: #30cbef;
 $track-2-color: #f44a6e;
@@ -250,6 +250,7 @@ body {
     margin-right: -15px;
 }
 
+/* base list styles for agenda */
 .list-group-item {
     margin: 5px 0 0 0;
     padding: 10px;
@@ -330,7 +331,46 @@ body {
         }
     }
 
+    /*list styles for comments */
+    &.list-group-comment {
 
+        min-height: 80px; 
+
+        & h4 {
+            min-height: 30px;
+        }
+
+        & .comment-marker {
+            @extend .track-marker;
+            min-height: 30px;
+            background-color: $highlighter-neutral;
+            /* TODO: nth-child(odd/even) ?*/
+        }
+
+        & .badge {
+            margin-right: 10px;
+        }
+
+        & .list-group-item-text {
+            max-width: 90%;
+        }
+    }
+
+}
+
+/* comments panel-heading */
+.panel-default > .panel-heading {
+    background-color: $highlighter-neutral;
+    color: #fff;
+    text-align: center;
+
+    border-bottom: $dash;
+
+    & h3 {
+        text-shadow: $main-shadow;
+        font-weight: bold;
+        font-size: 1.25em;
+    }
 }
 
 .menu-title {
