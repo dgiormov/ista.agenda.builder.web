@@ -88,7 +88,12 @@ body {
         & li {
             background-color: #fff;
             border-bottom: $dash;
-            margin-bottom: 0px;
+            margin-bottom: 1px;
+            transition: 0.2s;
+
+            &:active {
+                transform: translateY(2px);
+            }
 
             & .icon-holder {
                 background-color: $highlighter-positive;
@@ -416,9 +421,4 @@ body {
         width: 225px;
     }
 
-    .side-nav li a:hover,
-    .side-nav li a:focus {
-        outline: none;
-        background-color: #f8f8f8 !important;
-    }
 }
