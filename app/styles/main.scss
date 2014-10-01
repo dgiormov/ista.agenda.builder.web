@@ -20,6 +20,7 @@ $dash: 2px solid rgba(0,0,0,0.12);
 body {
     background-color: $main-background; 
     font-family: 'PT Sans', 'Arial', 'Helvetica' sans-serif;
+    padding-top: 60px;
 }
 
 /* NAVBAR */
@@ -492,6 +493,29 @@ body {
         text-shadow: $main-shadow;
         font-weight: bold;
         font-size: 1.25em;
+    }
+
+    &.panel-agenda {
+        background-color: $highlighter-app;
+        margin-top: -8px;
+        padding: 0;
+
+        & a {
+            padding: 15px;
+            display: inline-block;
+            color: #fff;
+            font-size: 1.25em;
+            font-weight: bold;
+            text-shadow: $main-shadow;
+
+            & .fa {
+                margin-right: 5px;
+            }
+
+            &.panel-link-active {
+                background-color: rgba(0,0,0,0.12);
+            }
+        }
     }
 }
 
