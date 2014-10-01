@@ -51,8 +51,6 @@ body {
             transform: translateY(0px);
             opacity: 1;
         }
-
-
     }
 
     & .navbar-brand {
@@ -360,22 +358,90 @@ body {
             max-width: 90%;
         }
     }
+
+    /*list styles for ranking */ 
+
+    &.list-group-ranking {
+
+        min-height: 80px;
+        padding-right: 20px;
+
+        & .list-group-item-heading {
+
+            min-height: 35px;
+
+            & span {
+                color: $body-gray;
+            }
+        }
+
+        .ranking-marker {
+            @extend .track-marker;
+            min-height: 80px;
+            background-color: $highlighter-neutral
+        }
+
+        & .fa {
+            color: $highlighter-neutral;
+            width: 100%;
+            font-size: 1.25em;
+        }
+
+        &::nth-child(odd) {
+            background-color: red!important;
+        }
+    }
 }
 
-/* input styling for commenting */
+/* input groups styling  */
 
 .input-group {
 
-    min-height: 80px;
     background-color: #fff;
     border-bottom: $dash;
     padding: 10px 20px 10px 10px;
     margin-top: 5px;
     width: 100%;
 
+
+    /* input styling for commenting */
+    &.input-group-comments {
+        min-height: 80px;
+    }
+
+    /* input styling for search */
+    &.input-group-search {
+        margin-bottom: 5px;
+
+        & .search-marker {
+            width: 10px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: -2px;
+            border-bottom: $dash;
+            background-color: $highlighter-app;
+        }
+
+        & .input-group-addon {
+            background-color: $highlighter-neutral;
+            color: #fff;
+            text-shadow: $main-shadow;
+            border: none;
+            border-radius: 0;
+            top: 0px;
+        }
+
+        & .form-control {
+            box-shadow: none;
+        }
+
+    }
+
     & .form-control {
         border-radius: 0;
         border: 1px solid #ccc;
+
         &:focus {
             box-shadow: none;
             border-color: $highlighter-positive;
@@ -390,6 +456,8 @@ body {
         border-bottom: $dash;
         background-color: $highlighter-positive;
         margin-top: 10px;
+        text-shadow: $main-shadow;
+        font-size: 18px;
     }
 
     & .input-marker {
@@ -404,15 +472,21 @@ body {
     }
 }
 
+
+
 /* comments panel-heading */
-.panel-default > .panel-heading.comments-title {
-    background-color: $highlighter-neutral;
+.panel-default > .panel-heading {
+    background-color: $highlighter-app;
     color: #fff;
     text-align: center;
     border-bottom: $dash;
     margin-bottom: -15px;.
     z-index: 1800;
     position: relative;
+
+    &.comments-title {
+        background-color: $highlighter-neutral;
+    }
 
     & h3 {
         text-shadow: $main-shadow;
