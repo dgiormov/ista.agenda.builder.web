@@ -9,16 +9,18 @@
 					<li>{{speaker.name}}</li>
 				</ol>
 			</div>
+			
 			<div class="col col-sm-12 col-md-6">
-				<div class="row">
-					<strong class="col">When</strong>
-					<div class="c -width-2-5ol">{{session.startTimeString}} ({{session.duration}} min.)</div>
+
+				<div class="row session-logistics">
+					<div class="session-start"><i class="fa fa-clock-o"></i>{{session.startTimeString}}</div>
+					<div class="session-duration">{{session.duration}} min</div>
+					<div class="session-location"><i class="fa fa-map-marker"></i>{{session.room}}</div>
 				</div>
-				<div class="row">
-					<strong class="col">Where</strong>
-					<div class="col">{{session.room}}</div>
+
+				<div class="col col-sm-12 col-md-6">
+					<div class="row">Rate this session</div>
 				</div>
-				<div class="row">Rate this session</div>
 			</div>
 		</div>
 		<p>{{session.description}}</p>

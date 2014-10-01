@@ -120,7 +120,7 @@ body {
         &.login {
     
             background-color: $highlighter-positive;
-            margin: 0px -15px 0 -15px;
+            margin: 0px -15px 3px -15px;
             min-width: 280px;
 
             & li {
@@ -132,6 +132,7 @@ body {
                 margin-bottom: 0;
 
                 & a {
+
                     width: 100%;
                     border-bottom: $dash;
 
@@ -375,6 +376,10 @@ body {
     & .form-control {
         border-radius: 0;
         border: 1px solid #ccc;
+        &:focus {
+            box-shadow: none;
+            border-color: $highlighter-positive;
+        }
     }
 
     & .input-group-btn .btn {
@@ -385,11 +390,6 @@ body {
         border-bottom: $dash;
         background-color: $highlighter-positive;
         margin-top: 10px;
-
-        &:focus {
-            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $ista-brand-1;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $ista-brand-1;
-        }
     }
 
     & .input-marker {
@@ -420,6 +420,51 @@ body {
         font-size: 1.25em;
     }
 }
+
+
+
+
+/* session logistics, start, duration, location */
+
+.session-logistics {
+    background-color: $track-1-color;
+
+    & .session-start,
+    & .session-duration,
+    & .session-location {
+        color: #fff;
+        text-shadow: $main-shadow;
+        text-align: center;
+        font-weight: bold;
+        line-height: 50px;
+        float: left;
+    }
+
+    & .session-start {
+        width: 42%;
+        font-size: 1.5em;
+    }
+
+    & .session-location {
+        width: 42%;
+        font-size: 1.5em;
+    }
+
+    & .session-duration {
+        width: 16%;
+        background-color: rgba(0,0,0,0.1);
+        text-transform: uppercase;
+        padding: 11px;
+        line-height: 1em;
+    }
+
+    & .fa {
+        margin-right: 7px;
+    }
+}
+
+
+
 
 .menu-title {
     float: left;
