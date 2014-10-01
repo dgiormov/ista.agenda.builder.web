@@ -59,7 +59,7 @@ body {
         color: #fff;
         padding: 10px;
         height: 45px;
-        font-size: 20px;
+        font-size: 1.25em;
         line-height: 28px;
         &:hover,
         &:focus {
@@ -88,8 +88,12 @@ body {
         & li {
             background-color: #fff;
             border-bottom: $dash;
-            margin-bottom: 1px;
+            margin-bottom: 3px;
             transition: 0.2s;
+
+            &::first-child {
+                margin-top: 3px;
+            }
 
             &:active {
                 transform: translateY(2px);
@@ -125,6 +129,7 @@ body {
                 margin-right: -4px;
                 text-align: center;
                 border-bottom: none;
+                margin-bottom: 0;
 
                 & a {
                     width: 100%;
@@ -192,7 +197,6 @@ body {
 
 
 
-
     & .navbar-toggle {
         
         padding: 10px;
@@ -241,7 +245,6 @@ body {
     & h3.list-group-track {
         color: $track-1-color;
     }
-
 }
 
 .list-group {
@@ -262,8 +265,9 @@ body {
     border-left: none;
     border-right: none;
     border-bottom: $dash;
+    transition: 0.2s;
 
-    &:first-child {
+    &::first-child {
         border-radius: 0;
     }
 
@@ -355,16 +359,60 @@ body {
             max-width: 90%;
         }
     }
+}
 
+/* input styling for commenting */
+
+.input-group {
+
+    min-height: 80px;
+    background-color: #fff;
+    border-bottom: $dash;
+    padding: 10px 20px 10px 10px;
+    margin-top: 5px;
+    width: 100%;
+
+    & .form-control {
+        border-radius: 0;
+        border: 1px solid #ccc;
+    }
+
+    & .input-group-btn .btn {
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        border: none;
+        border-bottom: $dash;
+        background-color: $highlighter-positive;
+        margin-top: 10px;
+
+        &:focus {
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $ista-brand-1;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $ista-brand-1;
+        }
+    }
+
+    & .input-marker {
+        min-height: 80px;
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: -2px;
+        border-bottom: $dash;
+        background-color: $highlighter-app;
+    }
 }
 
 /* comments panel-heading */
-.panel-default > .panel-heading {
+.panel-default > .panel-heading.comments-title {
     background-color: $highlighter-neutral;
     color: #fff;
     text-align: center;
-
     border-bottom: $dash;
+    margin-bottom: -15px;.
+    z-index: 1800;
+    position: relative;
 
     & h3 {
         text-shadow: $main-shadow;

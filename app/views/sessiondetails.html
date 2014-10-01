@@ -25,7 +25,7 @@
 	</div>
 </div>
 <div class="panel panel-default">
-	<div class="panel-heading">
+	<div class="panel-heading comments-title">
 		<h3 class="panel-title">Comments</h3>
 	</div>
 	<div class="panel-body">
@@ -36,12 +36,17 @@
 				<p class="list-group-item-text">{{comment.text}}</p>
 				<div class="comment-marker"></div>
 			</li>
+
+			<div class="input-group">
+			    	<textarea class="form-control" rows="3" ng-model="comment"></textarea>
+				<div>
+					<span class="input-group-btn">
+				        <button class="btn btn-default" type="button" ng-click="onSave()">Post</button>
+					</span>
+				</div>
+				<div class="input-marker"></div>
+			</div>
 		</ol>
-		<div class="input-group">
-		      <textarea class="form-control" rows="3" ng-model="comment"></textarea>
-			<span class="input-group-btn">
-		        <button class="btn btn-default" type="button" ng-click="onSave()">Post</button>
-			</span>
-		</div>
+
 	</div>
 </div>
