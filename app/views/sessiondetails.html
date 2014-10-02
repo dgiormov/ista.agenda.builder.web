@@ -4,19 +4,23 @@
 </div> -->
 	<div class="panel-body">
 
+		<div class="row session-name">
 
-		<div class="row">
-
-			<div class="col col-sm-12 col-md-6"><h1 class="session-name">{{session.name}}</h1>
-				<ol ng-repeat="speaker in session.speakers">
-					<li>{{speaker.name}}</li>
-				</ol>
-			</div>
-
-			<p>{{session.description}}</p>
+			<h4>{{session.name}}</h4>
 
 		</div>
 
+		<div class="row session-overall">
+
+			<ol ng-repeat="speaker in session.speakers">
+				<li><i class="fa fa-user"></i>{{speaker.name}}</li>
+			</ol>
+
+			<div class="session-description description-collapsed">
+				<div class="session-expander"><i class="fa fa-angle-down"></i></div>
+				<p>{{session.description}}</p>
+			</div>
+		</div>
 
 		<div class="row">
 
@@ -31,7 +35,6 @@
 			</div>
 
 		</div>
-
 
 		<div class="row">
 			<div class="col col-sm-12 col-md-6">

@@ -295,7 +295,7 @@ body {
         font-size: 1.25em;
         min-height: 65px;
         margin-bottom: 10px;
-        text-transform: capitalize!important;
+        text-transform: capitalize;
     }
 
     & h4.list-group-item-heading,
@@ -541,6 +541,97 @@ body {
 
 /* session logistics, start, duration, location */
 
+.session-name {
+
+    padding: 10px; 
+    margin-top: -23px;
+    background-color: #3cc677;
+    border-bottom: $dash;
+
+    & h4 {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        color: #fff;
+        text-shadow: $main-shadow;
+    }
+}
+
+.session-overall {
+    background-color: #3cc677;
+    color: #fff;
+    font-size: 1.25em;
+    text-shadow: $main-shadow;
+    padding: 10px;
+    border-bottom: $dash;
+
+    & ol {
+        list-style: none;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+
+
+        & .fa {
+            text-shadow: none;
+            margin-right: 10px;
+            color: rgba(0,0,0,0.35);
+        }
+    }
+
+    & .session-description {
+
+        position: relative;
+
+        &.description-collapsed {
+
+            & p {
+                height: 1px;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            & .session-expander:after {
+                content: 'MORE';
+            }
+
+        }
+
+        &.description-expanded {
+
+            & p {
+                height: auto;
+                margin: 0;
+            }
+
+            & .session-expander:after {
+
+                content: 'LESS';
+
+                & .fa {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        & .session-expander {
+
+            font-size: 0.825em;
+            font-weight: bold;
+            position: absolute;
+            top: -21px;
+            right: 5px;
+
+            & .fa {
+                margin-right: 5px;
+            }
+        }
+
+    }
+}
+
+
 .session-logistics {
     background-color: $track-1-color;
 
@@ -626,11 +717,6 @@ body {
 .huge {
     font-size: 50px;
     line-height: normal;
-}
-
-
-.session-name {
-    margin-top: 0;
 }
 
 .content {
