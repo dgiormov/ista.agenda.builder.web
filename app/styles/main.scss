@@ -199,15 +199,18 @@ body {
 
     & .navbar-toggle {
         
-        padding: 10px;
+        padding: 9px;
         margin: 5px 10px;
-        border: none;
+        border: 1px solid rgba(255,255,255,0.3);
         color: #fff;
 
         &:hover,
         &:focus { 
+
             background-color: rgba(0,0,0,0.15);
             color: #fff;
+            border: 1px solid transparent;
+
             & .icon-bar {
                 background-color: #fff;
                 box-shadow: $main-shadow;
@@ -291,13 +294,16 @@ body {
         font-weight: bold;
         font-size: 1.25em;
         min-height: 65px;
+        margin-bottom: 10px;
+        text-transform: capitalize!important;
     }
 
     & h4.list-group-item-heading,
     & h5.list-group-speaker { 
         color: $body-dark;
-        width: 65%;
+        width: 70%;
         display: inline-block;
+
     }
 
     & h3.list-group-track {
@@ -380,6 +386,15 @@ body {
             @extend .track-marker;
             min-height: 80px;
             background-color: $highlighter-neutral
+        }
+
+        &.list-group-me {
+
+            margin-bottom: 0;
+
+            & .ranking-marker {
+                background-color: $highlighter-app;
+            } 
         }
 
         & .fa {
@@ -513,13 +528,15 @@ body {
             }
 
             &.panel-link-active {
-                background-color: rgba(0,0,0,0.12);
+                background-color: rgba(0,0,0,0.15);
             }
         }
     }
 }
 
-
+.list-group-me-wrap {
+    margin-bottom: -30px;
+}
 
 
 /* session logistics, start, duration, location */
