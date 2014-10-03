@@ -423,6 +423,10 @@ body {
     /* input styling for commenting */
     &.input-group-comments {
         min-height: 80px;
+
+        & .form-control {
+            margin-bottom: 10px;
+        }
     }
 
     /* input styling for search */
@@ -470,8 +474,7 @@ body {
         color: #fff;
         border: none;
         border-bottom: $dash;
-        background-color: $highlighter-positive;
-        margin-top: 10px;
+        background-color: $highlighter-app;
         text-shadow: $main-shadow;
         font-size: 18px;
     }
@@ -532,6 +535,15 @@ body {
             }
         }
     }
+
+    /* codes view things */
+
+    &.codes-description {
+        margin-top: -8px;
+        margin-bottom: 0px;
+        background-color: #3cc677;
+    }
+
 }
 
 .list-group-me-wrap {
@@ -603,15 +615,16 @@ body {
             & p {
                 height: auto;
                 margin: 0;
+                padding: 10px;
             }
 
             & .session-expander:after {
 
                 content: 'LESS';
+            }
 
-                & .fa {
-                    transform: rotate(90deg);
-                }
+            & .fa {
+                transform: rotate(180deg);
             }
         }
 
@@ -633,7 +646,9 @@ body {
 
 
 .session-logistics {
+
     background-color: $track-1-color;
+    border-bottom: $dash;
 
     & .session-start,
     & .session-duration,
@@ -668,6 +683,7 @@ body {
         margin-right: 7px;
     }
 }
+
 
 
 
