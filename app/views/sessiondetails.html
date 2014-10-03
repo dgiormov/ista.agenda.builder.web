@@ -1,11 +1,13 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 
+
 		<div class="row session-name">
 
 			<h4>{{session.name}}</h4>
 
 		</div>
+
 
 		<div class="row session-overall">
 
@@ -15,11 +17,25 @@
 
 			<div class="session-description description-collapsed">
 				<div class="session-expander"><i class="fa fa-angle-down"></i></div>
-			<p>{{session.description}}</p>
+				<p>{{session.description}}</p>
 			</div>
+
 		</div>
 
+
 		<div class="row">
+
+			<div class="col col-sm-12 col-md-6 session-rating">
+				<div class="rate-title">Enjoyed the Session?</div>
+				<ul class="rate-stars">
+					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
+					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
+					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
+					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
+					<li class="rate-star not-rated"><i class="fa fa-star"></i></li>
+				</ul>
+				<div class="rating-marker"></div>
+			</div>
 
 			<div class="col col-sm-12 col-md-6">
 
@@ -31,12 +47,6 @@
 
 			</div>
 
-		</div>
-
-		<div class="row">
-			<div class="col col-sm-12 col-md-6">
-				Rate this session
-			</div>
 		</div>
 
 	</div>
