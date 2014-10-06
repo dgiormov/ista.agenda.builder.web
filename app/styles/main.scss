@@ -266,6 +266,28 @@ body {
     }
 }
 
+.list-group-item.track-2 {
+
+    & .track-marker {
+        background-color: $track-2-color;
+    }
+
+    & h3.list-group-track {
+        color: $track-2-color;
+    }
+}
+
+.list-group-item.track-3 {
+
+    & .track-marker {
+        background-color: $track-3-color;
+    }
+
+    & h3.list-group-track {
+        color: $track-3-color;
+    }
+}
+
 .list-group {
     background-color: $main-background;
     margin-left: -15px;
@@ -594,17 +616,32 @@ body {
     padding: 10px;
     border-bottom: $dash;
 
+    & ol:first-child {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+    }
+
     & ol {
         list-style: none;
         font-weight: bold;
-        margin: 0px;
-        padding: 0px;
+        margin: 10px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
+        border-top: 1px dashed rgba(0,0,0,0.2);
 
 
         & .fa {
             text-shadow: none;
             margin-right: 10px;
             color: rgba(0,0,0,0.35);
+        }
+
+        & .speaker-info {
+            font-weight: normal;
+            font-size: 0.825em;
+            padding-left: 30px;
+            width: 80%;
+
         }
     }
 

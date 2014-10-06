@@ -12,7 +12,11 @@
 		<div class="row session-overall">
 
 			<ol ng-repeat="speaker in session.speakers">
-				<li><i class="fa fa-user"></i>{{speaker.name}}</li>
+				<li>
+					<i class="fa fa-user"></i>
+					<span class="speaker-name">{{speaker.name}}</span>
+					<div class="speaker-info">Principal Jedi Knight TeamLead,<br>Company Name</div>
+				</li>
 			</ol>
 
 			<div ng-class="descrClass" class="session-description">
