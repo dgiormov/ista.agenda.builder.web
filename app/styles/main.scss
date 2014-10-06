@@ -82,6 +82,21 @@ body {
             font-weight: bold;
             display: block;
             padding: 15px 0 15px;
+
+            & span {
+                font-size: 0.825em;
+                text-transform: uppercase;
+                color: $body-dark;
+                opacity: 0.7;
+                float: right;
+                padding-right: 10px;
+            }
+        }
+
+        & .conference-day-agenda {
+            & .icon-holder {
+                background-color: $ista-brand-1;
+            }
         }
 
         & li {
@@ -99,7 +114,7 @@ body {
             }
 
             & .icon-holder {
-                background-color: $highlighter-positive;
+                background-color: $highlighter-app;
                 color: #fff;
                 text-align: center;
                 padding: 15px 0;
@@ -108,6 +123,7 @@ body {
                 width: 40px;
                 margin-right: 10px;
                 border-bottom: $dash;
+                text-shadow: $main-shadow;
             }
         }
 
@@ -118,7 +134,7 @@ body {
 
         &.login {
     
-            background-color: $highlighter-positive;
+            background-color: $highlighter-app;
             margin: 0px -15px 3px -15px;
             min-width: 280px;
 
