@@ -15,8 +15,8 @@
 				<li><i class="fa fa-user"></i>{{speaker.name}}</li>
 			</ol>
 
-			<div class="session-description description-collapsed">
-				<div class="session-expander"><i class="fa fa-angle-down"></i></div>
+			<div ng-class="descrClass" class="session-description">
+				<div class="session-expander" ng-click="expandColapse()"><i class="fa fa-angle-down"></i></div>
 				<p>{{session.description}}</p>
 			</div>
 
