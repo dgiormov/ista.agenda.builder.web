@@ -5,13 +5,13 @@
 	</div>
 	<div class="panel-body">
 <div class="list-group">
-  <a ng-href="#/sessions/{{session.id}}" class="list-group-item track-1" ng-repeat="session in sessions">
+  <a ng-href="#/sessions/{{session.id}}" class="list-group-item" ng-class="getTrackClass(session.track)" ng-repeat="session in sessions">
     <h4 class="list-group-item-heading">{{session.name}}</h4>
     <div class="add-session not-added"> <!-- Classes need to be changed to "add-session session-added" when the session is added -->
     	<i class="fa fa-plus"></i> <!-- Classes need to be changed to "fa fa-check" when the session is added -->
     </div>
-    <h5 class="list-group-speaker">Speaker Name</h5>
-    <h3 class="list-group-track">Track 1</h3>
+    <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
+    <h3 class="list-group-track">{{session.track}}</h3>
     <div class="track-marker"></div>
   </a>
 </div>
