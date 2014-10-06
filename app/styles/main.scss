@@ -7,6 +7,7 @@ $secondary-background: #efefef;
 $highlighter-app: #43dd90;
 $highlighter-positive: #71e4aa;
 $highlighter-neutral: #d2d2d2;
+$highlighter-dark: #3CC677;
 
 $track-1-color: #30cbef;
 $track-2-color: #f44a6e;
@@ -313,6 +314,7 @@ body {
     }
 
     & .track-marker {
+        background-color: $highlighter-app;
         min-height: 110px;
         width: 10px;
         position: absolute;
@@ -322,7 +324,7 @@ body {
         border-bottom: $dash;
     }
 
-    & h5.list-group-speaker { 
+    & h5.list-group-speaker {
         position: relative;
         margin: 0;
         font-size: 1em;
@@ -542,7 +544,7 @@ body {
     position: relative;
 
     &.comments-title {
-        background-color: $highlighter-neutral;
+        background-color: $body-gray;
     }
 
     & h3 {
@@ -579,7 +581,7 @@ body {
     &.codes-description {
         margin-top: -8px;
         margin-bottom: 0px;
-        background-color: #3cc677;
+        background-color: $highlighter-dark;
     }
 
 }
@@ -595,7 +597,7 @@ body {
 
     padding: 10px; 
     margin-top: -23px;
-    background-color: #3cc677;
+    background-color: $highlighter-dark;
     border-bottom: $dash;
 
     & h4 {
@@ -609,7 +611,7 @@ body {
 }
 
 .session-overall {
-    background-color: #3cc677;
+    background-color: $highlighter-dark;
     color: #fff;
     font-size: 1.25em;
     text-shadow: $main-shadow;
@@ -700,8 +702,20 @@ body {
 
 .session-logistics {
 
-    background-color: $track-1-color;
     border-bottom: $dash;
+    background-color: $highlighter-app;
+
+    &.track-1 {
+        background-color: $track-1-color;
+    }
+
+    &.track-2 {
+        background-color: $track-2-color;
+    }
+
+    &.track-3 {
+        background-color: $track-3-color;
+    }
 
     & .session-start,
     & .session-duration,
