@@ -8,7 +8,7 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments) {
+	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, RatingService) {
 		$scope.descrClass="description-collapsed";
 		$scope.session = sessionDetails.get({
 			id: $routeParams.id
@@ -30,5 +30,23 @@ angular.module('istaAngularApp')
 			} else {
 				$scope.descrClass="description-expanded";
 			}
+		}
+		
+		$scope.getStarSelectedClass = function(starNumber){
+			if(starNumber <= $scope.session.rating){
+				return "yes-rated";
+			} else {
+				return "not-rated";
+			}
+		}
+		$scope.rate = function(stars, session){
+   		 new RatingService().$save({
+   				  	sessionId: session.id,
+   					rating: stars}, function(){
+   						$scope.session.rating = stars;
+   					}, function(){
+   						$scope.session.rating = 0;
+   					});
+			
 		}
 	});

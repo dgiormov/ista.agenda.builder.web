@@ -15,7 +15,7 @@
 				<li>
 					<i class="fa fa-user"></i>
 					<span class="speaker-name">{{speaker.name}}</span>
-					<div class="speaker-info">Principal Jedi Knight TeamLead,<br>Company Name</div>
+					<div class="speaker-info">{{speaker.job_title}},<br>{{speaker.company}}</div>
 				</li>
 			</ol>
 
@@ -32,11 +32,11 @@
 			<div class="col col-sm-12 col-md-6 session-rating">
 				<div class="rate-title">Enjoyed the Session?</div>
 				<ul class="rate-stars">
-					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
-					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
-					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
-					<li class="rate-star yes-rated"><i class="fa fa-star"></i></li>
-					<li class="rate-star not-rated"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(1)" ng-click="rate(1,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(2)" ng-click="rate(2,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(3)" ng-click="rate(3,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(4)" ng-click="rate(4,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(5)" ng-click="rate(5,session)"><i class="fa fa-star"></i></li>
 				</ul>
 				<div class="rating-marker"></div>
 			</div>

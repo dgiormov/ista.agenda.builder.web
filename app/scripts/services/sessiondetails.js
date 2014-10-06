@@ -10,4 +10,7 @@
 angular.module('istaAngularApp')
   .service('sessionDetails', function sessionDetails($resource) {
   	return $resource('rest/sessions/:id');
+  })
+  .service('RatingService', function sessionDetails($resource) {
+  	return $resource('rest/rating/session');
   });
