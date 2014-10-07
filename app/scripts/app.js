@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/days/:id', {
         templateUrl: 'views/main.html',
@@ -39,3 +39,10 @@ angular
         redirectTo: '/days/26'
       });
   });
+
+// quick and dirty fix for colapsable not closing
+jQuery(document).ready(function() {
+  jQuery("#navbar-ex1-collapse").click(function() {
+    jQuery("#navbar-ex1-collapse").collapse('hide');
+  });
+});
