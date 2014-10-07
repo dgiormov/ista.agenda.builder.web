@@ -313,6 +313,11 @@ body {
         border-radius: 0;
     }
 
+    & a {
+        display: inline-block;
+        width: 67%;
+    }
+
     & .track-marker {
         background-color: $highlighter-app;
         min-height: 110px;
@@ -341,7 +346,7 @@ body {
     & h4.list-group-item-heading,
     & h5.list-group-speaker { 
         color: $body-dark;
-        width: 70%;
+        width: 100%;
         display: inline-block;
 
     }
