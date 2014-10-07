@@ -1,23 +1,18 @@
 <div class="panel panel-default">
 	<div class="panel-heading panel-agenda">
 		<a href ng-click="filterSessions(false)" ng-class="getSelectedAgendaClass(false)"><i class="fa fa-clock-o"></i>Agenda</a>
-  	<a href ng-click="filterSessions(true)" ng-class="getSelectedAgendaClass(true)"><i class="fa fa-check"></i>My Agenda</a>
+		<a href ng-click="filterSessions(true)" ng-class="getSelectedAgendaClass(true)"><i class="fa fa-check"></i>My Agenda</a>
 	</div>
 	<div class="panel-body">
 <div class="list-group">
-  <div class="list-group-item" ng-repeat="session in sessions" ng-class="getTrackClass(session.track)">
-    <a ng-href="#/sessions/{{session.id}}">
-      <h4 class="list-group-item-heading">{{session.name}}</h4>
-      <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
-    </a>
-
-    <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session, $event);">
-      <i ng-class="isChecked(session.isSelected)" class="fa"></i> <!-- Classes need to be changed to "fa fa-check" when the session is added -->
+  <A ng-href="#/sessions/{{session.id}}" class="list-group-item" ng-class="getTrackClass(session.track)" ng-repeat="session in sessions | isSelectedElement:selected" stopEvent>
+    <h4 class="list-group-item-heading">{{session.name}}</h4>
+    <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session)"> 
+    	<i ng-class="isChecked(session.isSelected)" class="fa"></i> <!-- Classes need to be changed to "fa fa-check" when the session is added -->
     </div>
-
+    <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
     <h3 class="list-group-track">{{session.track}}</h3>
     <div class="track-marker"></div>
-
-  </div>
+  </A>
 </div>
 </div>
