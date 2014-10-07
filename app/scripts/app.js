@@ -43,6 +43,6 @@ angular
 // quick and dirty fix for colapsable not closing
 jQuery(document).ready(function() {
   jQuery("#navbar-ex1-collapse").click(function() {
-    jQuery("#navbar-ex1-collapse").collapse('hide');
+    jQuery("#navbar-ex1-collapse.in").collapse('hide');
   });
 });
