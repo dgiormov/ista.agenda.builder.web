@@ -8,18 +8,15 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('MainCtrl', function($scope, session, PersonService) {
+	.controller('MainCtrl', function($scope, $routeParams, session, PersonService) {
 		$scope.selected = false;
 		$scope.sessions = session.query({
-			date: 26
+			date: $routeParams.id
 		});
 
 		//classes
 		$scope.getTrackClass = function(track) {
 			return track.replace(" ", "-").toLowerCase();
-		}
-		$scope.changeDate = function(date) {
-			debugger;
 		}
 		$scope.addSession = function(session, $event) {
 			$event.preventDefault();

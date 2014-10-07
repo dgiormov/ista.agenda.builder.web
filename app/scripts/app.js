@@ -19,7 +19,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/days/:id', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -36,6 +36,6 @@ angular
         controller: 'RankingCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/days/26'
       });
   });
