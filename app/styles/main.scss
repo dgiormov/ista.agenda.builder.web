@@ -461,6 +461,21 @@ body {
     }
 }
 
+/* list group headings */
+
+.list-group-heading {
+    background-color: $highlighter-app;
+    color: #fff;
+    text-align: center;
+    text-shadow: $main-shadow;
+    font-weight: bold;
+    font-size: 1.25em;
+    border-bottom: $dash;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+} 
+
 /* input groups styling  */
 
 .input-group {
@@ -470,7 +485,6 @@ body {
     padding: 10px 20px 10px 10px;
     margin-top: 5px;
     width: 100%;
-
 
     /* input styling for commenting */
     &.input-group-comments {
