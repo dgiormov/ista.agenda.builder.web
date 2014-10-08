@@ -627,7 +627,8 @@ body {
     background-color: $highlighter-dark;
     border-bottom: $dash;
 
-    & h4 {
+    & h4 { 
+        width: 75%;
         margin-top: 10px;
         font-weight: bold;
         font-size: 1.5em;
@@ -657,26 +658,40 @@ body {
         margin: 10px 0px 0px 0px;
         padding: 10px 0px 0px 0px;
         border-top: 1px dashed rgba(0,0,0,0.2);
+        float: left;
+
+
+        & li {
+            float: left;
+        }
+
+        & .speaker-name {
+            float: left;
+            width: 50%;
+        }
 
 
         & .fa {
             text-shadow: none;
             margin-right: 10px;
             color: rgba(0,0,0,0.35);
+            float: left;
+            font-size: 4em;
         }
 
         & .speaker-info {
             font-weight: normal;
             font-size: 0.825em;
-            padding-left: 30px;
-            width: 80%;
-
+            display: inline-block;
+            float: left;
+            width: 50%;
         }
     }
 
     & .session-description {
 
         position: relative;
+        float: left;
 
         &.description-collapsed {
 
@@ -684,12 +699,13 @@ body {
                 height: 1px;
                 margin: 0;
                 overflow: hidden;
+                float: left;
+                word-break: break-word;
             }
 
             & .session-expander:after {
-                content: 'MORE';
+                content: 'View Bio';
             }
-
         }
 
         &.description-expanded {
@@ -698,12 +714,13 @@ body {
                 height: auto;
                 margin: 0;
                 padding: 10px;
-                word-wrap: break-word;
+                word-break: break-word;
+                float: left;
             }
 
             & .session-expander:after {
 
-                content: 'LESS';
+                content: 'Hide Bio';
             }
 
             & .fa {
@@ -716,7 +733,7 @@ body {
             font-size: 0.825em;
             font-weight: bold;
             position: absolute;
-            top: -21px;
+            bottom: 0px;
             right: 5px;
 
             & .fa {
