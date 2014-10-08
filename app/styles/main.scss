@@ -629,12 +629,76 @@ body {
 
     & h4 { 
         width: 75%;
+        float: left;
         margin-top: 10px;
         font-weight: bold;
         font-size: 1.5em;
         text-transform: capitalize;
         color: #fff;
         text-shadow: $main-shadow;
+    }
+
+    & .session-description {
+
+        position: relative;
+        float: left;
+
+        &.description-collapsed {
+
+            & p {
+                color: #fff;
+                height: 1px;
+                margin: 0;
+                overflow: hidden;
+                float: left;
+                word-break: break-word;
+                font-size: 1.25em;
+                text-shadow: $main-shadow;
+            }
+
+            & .session-expander:after {
+                content: 'View Info';
+            }
+        }
+
+        &.description-expanded {
+
+            & p {
+                color: #fff;
+                height: auto;
+                margin: 0;
+                padding: 10px 0px;
+                word-break: break-word;
+                float: left;
+                word-break: break-word;
+                font-size: 1.25em;
+                text-shadow: $main-shadow;
+            }
+
+            & .session-expander:after {
+
+                content: 'Hide Info';
+            }
+
+            & .fa {
+                transform: rotate(180deg);
+            }
+        }
+
+        & .session-expander {
+
+            color: #fff;
+            text-shadow: $main-shadow;
+            font-size: 1em;
+            font-weight: bold;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+
+            & .fa {
+                margin-right: 5px;
+            }
+        }
     }
 }
 
@@ -688,7 +752,8 @@ body {
         }
     }
 
-    & .session-description {
+    /* description for speakers (bio)*/
+    & .bio-description {
 
         position: relative;
         float: left;
@@ -713,7 +778,7 @@ body {
             & p {
                 height: auto;
                 margin: 0;
-                padding: 10px;
+                padding: 10px 0px;
                 word-break: break-word;
                 float: left;
             }
@@ -785,7 +850,7 @@ body {
 
     & .session-duration {
         width: 16%;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0,0,0,0.15);
         text-transform: uppercase;
         padding: 11px;
         line-height: 1em;

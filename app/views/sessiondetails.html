@@ -6,6 +6,11 @@
 
 			<h4>{{session.name}}</h4>
 
+			<div ng-class="descrClass" class="session-description">
+				<div class="session-expander" ng-click="expandColapse()"><i class="fa fa-angle-down"></i></div>
+				<p>{{session.description}}</p>
+			</div>
+
 		</div>
 
 
@@ -19,13 +24,12 @@
 				</li>
 			</ol>
 
-			<div ng-class="descrClass" class="session-description">
+			<div ng-class="descrClass" class="bio-description">
 				<div class="session-expander" ng-click="expandColapse()"><i class="fa fa-angle-down"></i></div>
 				<p>{{session.description}}</p>
 			</div>
 
 		</div>
-
 
 		<div class="row">
 
