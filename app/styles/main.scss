@@ -258,7 +258,7 @@ body {
 
 /* AGENDA LIST-ITEMS */
 
-.list-group-item.track-1 {
+.list-group-item.track-a {
 
     & .track-marker {
         background-color: $track-1-color;
@@ -269,7 +269,7 @@ body {
     }
 }
 
-.list-group-item.track-2 {
+.list-group-item.track-b {
 
     & .track-marker {
         background-color: $track-2-color;
@@ -280,7 +280,7 @@ body {
     }
 }
 
-.list-group-item.track-3 {
+.list-group-item.track-c {
 
     & .track-marker {
         background-color: $track-3-color;
@@ -719,15 +719,15 @@ body {
     border-bottom: $dash;
     background-color: $highlighter-app;
 
-    &.track-1 {
+    &.track-a {
         background-color: $track-1-color;
     }
 
-    &.track-2 {
+    &.track-b {
         background-color: $track-2-color;
     }
 
-    &.track-3 {
+    &.track-c {
         background-color: $track-3-color;
     }
 
