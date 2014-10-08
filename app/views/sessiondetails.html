@@ -43,7 +43,7 @@
 
 			<div class="col col-sm-12 col-md-6">
 
-				<div class="row session-logistics">
+				<div class="row session-logistics" ng-class="getTrackClass(session)">
 					<div class="session-start"><i class="fa fa-clock-o"></i>{{session.startTimeString}}</div>
 					<div class="session-duration">{{session.duration}} min</div>
 					<div class="session-location"><i class="fa fa-map-marker"></i>{{session.room}}</div>

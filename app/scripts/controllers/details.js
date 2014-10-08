@@ -47,6 +47,13 @@ angular.module('istaAngularApp')
    					}, function(){
    						$scope.session.rating = 0;
    					});
-			
+		}
+		$scope.getTrackClass = function(session) {
+			if(session.$resolved){
+				return session.track.replace(" ", "-").toLowerCase();				
+			} else {
+				return "";
+			}
+
 		}
 	});

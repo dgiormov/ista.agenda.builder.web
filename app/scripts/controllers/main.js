@@ -13,11 +13,7 @@ angular.module('istaAngularApp')
 		$scope.sessions = session.query({
 			date: $routeParams.id
 		});
-
-		//classes
-		$scope.getTrackClass = function(track) {
-			return track.replace(" ", "-").toLowerCase();
-		}
+		
 		$scope.addSession = function(session, $event) {
 			$event.preventDefault();
 			new PersonService().$save({
@@ -50,6 +46,9 @@ angular.module('istaAngularApp')
 			} else {
 				return "";
 			}
+		}
+		$scope.getTrackClass = function(track) {
+			return track.replace(" ", "-").toLowerCase();
 		}
 	})
 	.filter('isSelectedElement', function() {
