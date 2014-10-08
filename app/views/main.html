@@ -11,7 +11,7 @@
       <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
     </a>
 
-    <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session)"> 
+    <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session, $event)">
       <i ng-class="isChecked(session.isSelected)" class="fa"></i> <!-- Classes need to be changed to "fa fa-check" when the session is added -->
     </div>
 
