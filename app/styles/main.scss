@@ -42,7 +42,7 @@ body {
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.65);
-            height: 500px;
+            height: 1000px;
             transform-origin: top;
             transform: translateY(-1000px);
             transition: 0.25s;
@@ -321,6 +321,10 @@ body {
         border-bottom: $dash;
         transition: 0.2s;
         position: relative;
+
+        &:active {
+            transform: translateY(3px);
+        }
     }
 
     &::first-child {
@@ -329,7 +333,7 @@ body {
 
     & a {
         display: inline-block;
-        width: 67%; 
+        width: 70%; 
     }
 
     & .track-marker {
@@ -405,6 +409,12 @@ body {
 
         min-height: 80px;
 
+        &:nth-child(odd) {
+            & .comment-marker {
+                background-color: darken( $highlighter-neutral, 10% ) 
+            }
+        }
+
         & .list-group-item-holder {
             min-height: 80px;
         } 
@@ -421,7 +431,7 @@ body {
             /* TODO: nth-child(odd/even) ?*/
         }
 
-        & .badge {
+        & .badge { 
             margin-right: 10px;
         }
 
@@ -451,10 +461,13 @@ body {
     }
 
     /*list styles for ranking */ 
-
     &.list-group-ranking {
 
         min-height: 80px;
+
+        & .list-group-item-holder {
+            min-height: 80px;
+        }
 
         & h4 {
             width: auto;
@@ -493,10 +506,10 @@ body {
             color: $highlighter-neutral;
             width: 100%;
             font-size: 1.25em;
-        }
 
-        &::nth-child(odd) {
-            background-color: red!important;
+            &:after {
+                content: '&#xf105;'
+            }
         }
     }
 }
