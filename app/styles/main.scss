@@ -298,7 +298,20 @@ body {
 }
 
 /* base list styles for agenda */
+
+
+/* outer wrap with ng-repeat */ /* due to headings */
 .list-group-item {
+    margin: 5px 0 0 0;
+    padding: 0px;
+    border-radius: 0;
+    min-height: 110px;
+    border: none;
+    background: transparent;
+}
+
+/* inner wrap, essential styling */ /* due to headings */
+.list-group-item-holder {
     margin: 5px 0 0 0;
     padding: 10px;
     border-radius: 0;
@@ -310,6 +323,7 @@ body {
     border-right: none;
     border-bottom: $dash;
     transition: 0.2s;
+    position: relative;
 
     &::first-child {
         border-radius: 0;
@@ -494,7 +508,7 @@ body {
     border-bottom: $dash;
     position: relative;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 } 
 
 /* input groups styling  */
