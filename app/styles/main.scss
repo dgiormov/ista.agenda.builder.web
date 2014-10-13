@@ -137,7 +137,7 @@ body {
 
         &.login {
     
-            background-color: $highlighter-app;
+            background-color: $ista-brand-1;
             margin: 0px -15px 3px -15px;
             min-width: 280px;
 
@@ -506,13 +506,22 @@ body {
             color: $highlighter-neutral;
             width: 100%;
             font-size: 1.25em;
+        }
 
-            &:after {
-                content: '&#xf105;'
+        &.leader {
+            & .fa {
+            
+                color: $ista-brand-1;
+
+                &:before {
+                    content: '\f091';
+                }
             }
         }
     }
 }
+
+
 
 /* list group headings */
 
@@ -699,7 +708,12 @@ body {
         margin-top: 10px;
         margin-bottom: 45px;
         text-align: center;
+        transition: 0.25s;
 
+/*         &:active {
+    transform: scale(1.2);
+}
+ */
         &.not-added {
             background-color: rgba(0,0,0,0.20);
         }
@@ -1051,6 +1065,42 @@ body {
 
 @media(min-width:768px) {
 
+    body {
+        overflow-y: scroll; 
+    }
+
+    .navbar-default .navbar-header {
+        width: 70%;
+    }
+
+    .navbar-default .navbar-collapse {
+        width: 30%;
+        float: left;
+    }
+
+    .navbar-default .navbar-nav.login {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-default .navbar-nav li > a,
+    .navbar-default .navbar-nav.login .login-holder {
+        padding: 13px 0px 12px 0px;
+    }
+
+    .navbar-default .navbar-nav li > a span {
+        float: left;
+    }
+
+    .navbar-default .navbar-nav li:active {
+        transform: none;
+        background: darken(#fff, 15%)!important;
+    }
+
+    .navbar-default .navbar-nav li:hover  {
+        background: darken(#fff, 5%);
+    }
+
     .login {
         padding-right: 30px;
     }
@@ -1061,22 +1111,59 @@ body {
 
     #page-wrapper {
         padding: 10px;
+        width: 80%;
     }
 
     .side-nav {
         position: fixed;
-        top: 51px;
+        top: 61px;
         background-color: #FFF;
         left: 15px;
-        width: 225px;
+        width: 230px;
         margin-left: -225px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
+
     }
 
     .side-nav>li>a {
         width: 225px;
     }
 
+
+    .session-logistics .session-start, 
+    .session-logistics .session-location {
+        line-height: 63px;
+    }
+
+    .session-logistics .session-duration {
+        line-height: 41px;
+        max-height: 63px;
+    }
+
+    .session-overall,
+    .session-name {
+        padding: 20px
+    }
+
+    .navbar-default .navbar-nav.side-nav li {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .list-group-item .list-group-item-holder {
+        border-left: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .list-group-item a {
+        width: 80%;
+    }
+
+}
+
+@media(min-width:1281px) {
+    #page-wrapper {
+        width: 65%;
+    }
 }
