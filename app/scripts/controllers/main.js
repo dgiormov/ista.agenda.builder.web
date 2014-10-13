@@ -50,6 +50,14 @@ angular.module('istaAngularApp')
 		$scope.getTrackClass = function(track) {
 			return track.replace(" ", "-").toLowerCase();
 		}
+		$scope.lTime = 0;
+		$scope.isChangedTime = function(cTime){
+			if($scope.lTime != cTime){
+				$scope.lTime = cTime;
+				return true;
+			}
+			return false;
+		}
 	})
 	.filter('isSelectedElement', function() {
 		return function(items, isSelected) {

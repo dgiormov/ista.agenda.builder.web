@@ -6,18 +6,8 @@
 	<div class="panel-body">
 <div class="list-group">
   
-  <div class="list-group-heading">09:00</div>
-  <div class="list-group-heading">10:00</div>
-  <div class="list-group-heading">11:00</div>
-  <div class="list-group-heading">12:00</div>
-  <div class="list-group-heading">13:00</div>
-  <div class="list-group-heading">14:00</div>
-  <div class="list-group-heading">15:00</div>
-  <div class="list-group-heading">16:00</div>
-  <div class="list-group-heading">17:00</div>
-  <div class="list-group-heading">18:00</div>
-
   <div class="list-group-item" ng-class="getTrackClass(session.track)" ng-repeat="session in sessions | isSelectedElement:selected" stopEvent>
+    <div class="list-group-heading" ng-show="isChangedTime(session.startTime)">{{session.startTimeString}}</div>
     <a ng-href="#/sessions/{{session.id}}">
       <h4 class="list-group-item-heading">{{session.name}}</h4>
       <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
