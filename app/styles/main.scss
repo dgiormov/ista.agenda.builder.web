@@ -675,7 +675,7 @@ body {
 
 .session-name {
 
-    padding: 10px; 
+    padding: 10px 10px 20px 10px; 
     margin-top: -23px;
     background-color: $highlighter-dark;
     border-bottom: $dash;
@@ -769,7 +769,7 @@ body {
             font-size: 1em;
             font-weight: bold;
             position: absolute;
-            bottom: 5px;
+            bottom: -10px;
             right: 5px;
 
             & .fa {
@@ -804,6 +804,7 @@ body {
 
         & li {
             float: left;
+            padding-bottom: 20px; /* this is here due to multiple speaker scenario */
         }
 
         & .speaker-name {
@@ -812,7 +813,7 @@ body {
         }
 
 
-        & .fa {
+        & .fa-user {
             text-shadow: none;
             margin-right: 10px;
             color: rgba(0,0,0,0.35);
@@ -858,6 +859,7 @@ body {
                 padding: 10px 0px;
                 word-break: break-word;
                 float: left;
+                font-weight: normal;
             }
 
             & .session-expander:after {
@@ -875,7 +877,7 @@ body {
             font-size: 0.825em;
             font-weight: bold;
             position: absolute;
-            bottom: 0px;
+            bottom: -15px;
             right: 5px;
 
             & .fa {
@@ -968,6 +970,11 @@ body {
             padding: 10px 15px;
             font-size: 1.25em;
             margin-left: 5px;
+            transition: 0.25s;
+
+            &:active {
+                transform: scale(1.2);
+            }
 
             &.yes-rated {
                 background-color: $highlighter-app;
@@ -1041,8 +1048,6 @@ body {
 .content {
     padding: 20px;
 }
-
-
 
 @media(min-width:768px) {
 
