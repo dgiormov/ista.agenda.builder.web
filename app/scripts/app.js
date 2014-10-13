@@ -38,6 +38,8 @@ angular
       .otherwise({
         redirectTo: '/days/26'
       });
+  }).controller('LoginCtrl', function($scope, UserService){
+	  $scope.userDetails = UserService.get();
   });
 
 // quick and dirty fix for colapsable not closing
