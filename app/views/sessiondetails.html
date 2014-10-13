@@ -25,14 +25,13 @@
 					<i class="fa fa-user"></i>
 					<span class="speaker-name">{{speaker.name}}</span>
 					<div class="speaker-info">{{speaker.job_title}},<br>{{speaker.company}}</div>
+					<div ng-class="getBioClass($index)" class="bio-description">
+						<div class="session-expander" ng-click="expandColapseBio($index)"><i class="fa fa-angle-down"></i></div>
+						<p>{{speaker.bio}}</p>
+					</div>
+					
 				</li>
 			</ol>
-
-			<div ng-class="descrClass" class="bio-description">
-				<div class="session-expander" ng-click="expandColapse()"><i class="fa fa-angle-down"></i></div>
-				<p>{{session.description}}</p>
-			</div>
-
 		</div>
 
 		<div class="row">

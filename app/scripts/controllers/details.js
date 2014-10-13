@@ -10,9 +10,16 @@
 angular.module('istaAngularApp')
 	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, RatingService) {
 		$scope.descrClass="description-collapsed";
+		$scope.bioStatus = new Array();
 		$scope.session = sessionDetails.get({
 			id: $routeParams.id
+		}, function(){
+			var speakers = $scope.session.speakers;
+			for(var i=0; i<speakers.length; i++){
+				$scope.bioStatus[i] = "description-collapsed";
+			}
 		});
+		
 		$scope.refreshComments = function(){
 		$scope.comments = sessionComments.query({
 			session_id: $routeParams.id
@@ -31,6 +38,19 @@ angular.module('istaAngularApp')
 				$scope.descrClass="description-expanded";
 			}
 		}
+		
+		$scope.expandColapseBio = function(indexBio){
+			if($scope.bioStatus[indexBio] ==="description-expanded"){
+				$scope.bioStatus[indexBio]="description-collapsed";
+			} else {
+				$scope.bioStatus[indexBio]="description-expanded";
+			}
+		}
+		
+		$scope.getBioClass = function(indexBio){
+			return $scope.bioStatus[indexBio];
+		}
+		
 		
 		$scope.getStarSelectedClass = function(starNumber){
 			if(starNumber <= $scope.session.rating){
