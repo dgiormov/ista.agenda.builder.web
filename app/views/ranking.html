@@ -5,10 +5,12 @@
 	<div class="panel-body">
 		<ul class="list-group list-group-me-wrap">
 			<li class="list-group-item list-group-ranking list-group-me">
-				<span class="badge">{{allRanking.me.points}}</span>
-				<h4 class="list-group-item-heading"><span>#{{allRanking.me.position}}</span> {{allRanking.me.name}}</h4> 
-				<i class="fa fa-user"></i>
-				<div class="ranking-marker"></div>
+				<div class="list-group-item-holder">
+					<span class="badge">{{allRanking.me.points}}</span>
+					<h4 class="list-group-item-heading"><span>#{{allRanking.me.position}}</span> {{allRanking.me.name}}</h4> 
+					<i class="fa fa-user"></i>
+					<div class="ranking-marker"></div>
+				</div>
 			</li>
 		</ul>
 
@@ -29,10 +31,12 @@
 	<div class="panel-body">
 		<ol class="list-group">
 			<li class="list-group-item list-group-ranking" ng-repeat="rank in allRanking.ranking | filter:search" ng-class="{leader: $index < 1}" >
-				<span class="badge">{{rank.points}}</span>
-				<h4 class="list-group-item-heading"><span>#{{rank.position}}</span> {{rank.name}}</h4> 
-				<i class="fa fa-user"></i>
-				<div class="ranking-marker"></div>
+				<div class="list-group-item-holder">
+					<span class="badge">{{rank.points}}</span>
+					<h4 class="list-group-item-heading"><span>#{{rank.position}}</span> {{rank.name}}</h4> 
+					<i class="fa fa-user"></i>
+					<div class="ranking-marker"></div>
+				</div>
 			</li>
 		</ol>
 	</div>

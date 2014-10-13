@@ -299,8 +299,7 @@ body {
 
 /* base list styles for agenda */
 
-
-/* outer wrap with ng-repeat */ /* due to headings */
+/* list-group-item-holder nessessary due to headings */
 .list-group-item {
     margin: 5px 0 0 0;
     padding: 0px;
@@ -308,22 +307,21 @@ body {
     min-height: 110px;
     border: none;
     background: transparent;
-}
 
-/* inner wrap, essential styling */ /* due to headings */
-.list-group-item-holder {
-    margin: 5px 0 0 0;
-    padding: 10px;
-    border-radius: 0;
-    color: $body-dark;
-    background-color: #fff;
-    min-height: 110px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    border-left: none;
-    border-right: none;
-    border-bottom: $dash;
-    transition: 0.2s;
-    position: relative;
+    & .list-group-item-holder {
+        margin: 5px 0 0 0;
+        padding: 10px;
+        border-radius: 0;
+        color: $body-dark;
+        background-color: #fff;
+        min-height: 110px;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        border-left: none;
+        border-right: none;
+        border-bottom: $dash;
+        transition: 0.2s;
+        position: relative;
+    }
 
     &::first-child {
         border-radius: 0;
@@ -405,7 +403,11 @@ body {
     /*list styles for comments */
     &.list-group-comment {
 
-        min-height: 80px; 
+        min-height: 80px;
+
+        & .list-group-item-holder {
+            min-height: 80px;
+        } 
 
         & h4 {
             min-height: 30px;
@@ -421,7 +423,6 @@ body {
 
         & .badge {
             margin-right: 10px;
-
         }
 
         & .comment-like {
@@ -454,7 +455,6 @@ body {
     &.list-group-ranking {
 
         min-height: 80px;
-        padding-right: 20px;
 
         & h4 {
             width: auto;
@@ -467,6 +467,11 @@ body {
             & span {
                 color: $body-gray;
             }
+        }
+
+        & .badge {
+            float: right;
+            margin-right: 10px;
         }
 
         .ranking-marker {
