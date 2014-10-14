@@ -8,7 +8,7 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, RatingService) {
+	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, RatingService, PersonService) {
 		$scope.descrClass="description-collapsed";
 		$scope.bioStatus = new Array();
 		$scope.session = sessionDetails.get({
@@ -19,6 +19,15 @@ angular.module('istaAngularApp')
 				$scope.bioStatus[i] = "description-collapsed";
 			}
 		});
+		
+		$scope.addSession = function(session) {
+			new PersonService().$save({
+				id: session.id,
+				isSelected: !session.isSelected
+			}, function() {
+				session.isSelected = !session.isSelected;
+			});
+		}
 		
 		$scope.refreshComments = function(){
 		$scope.comments = sessionComments.query({
@@ -74,6 +83,20 @@ angular.module('istaAngularApp')
 			} else {
 				return "";
 			}
-
 		}
-	});
+		$scope.isAdded = function(outer){
+			if(!$scope.session.isSelected){
+				if(outer){
+					return "not-added";
+				} else{
+					return "fa-plus";
+				}
+			} else {
+				if(outer){
+					return "session-added";
+				} else{
+					return "fa-check";
+				}
+			}
+		}
+});

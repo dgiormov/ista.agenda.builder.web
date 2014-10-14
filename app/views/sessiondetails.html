@@ -6,8 +6,8 @@
 
 			<h4>{{session.name}}</h4>
 
-		    <div class="add-session not-added">
-		      <i class="fa fa-plus"></i>
+		    <div ng-class="isAdded(true)" class="add-session" ng-click="addSession(session)">
+		      <i class="fa" ng-class="isAdded(false)"></i>
 		    </div>
 
 			<div ng-class="descrClass" class="session-description">
