@@ -4,16 +4,14 @@ $body-gray: #848484;
 $main-background: #ECECEC;
 $secondary-background: #efefef;
 
-$highlighter-app: #43dd90;
-$highlighter-positive: #71e4aa;
+$highlighter-app: #3482a9;
+$highlighter-positive: #8cc542;
 $highlighter-neutral: #d2d2d2;
-$highlighter-dark: #3CC677;
+$highlighter-dark: #3482a9;
 
 $track-1-color: #30cbef;
 $track-2-color: #f44a6e;
-$track-3-color: #ef6f18;
-
-$ista-brand-1: #0099b1;
+$track-3-color: #43dd90;
 
 $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
 $dash: 2px solid rgba(0,0,0,0.12);
@@ -58,9 +56,13 @@ body {
     & .navbar-brand {
         color: #fff;
         padding: 10px;
-        height: 45px;
+        height: 35px;
+        width: 145px;
         font-size: 1.25em;
         line-height: 28px;
+        background-image: url('../images/main-logo.png');
+        background-repeat: no-repeat;
+        margin-top: 10px;
         &:hover,
         &:focus {
             color: #fff;
@@ -68,7 +70,7 @@ body {
     }
 
     & .navbar-header {
-        background-color: $ista-brand-1;
+        background-image: url('../images/header-bg.png');
         border-bottom: $dash;
     }
 
@@ -97,7 +99,7 @@ body {
         & .conference-day-agenda,
         & .hands-on-agenda {
             & .icon-holder {
-                background-color: $ista-brand-1;
+                background-color: $highlighter-app;
             }
         }
 
@@ -137,7 +139,7 @@ body {
 
         &.login {
     
-            background-color: $ista-brand-1;
+            background-color: $highlighter-app;
             margin: 0px -15px 3px -15px;
             min-width: 280px;
 
@@ -361,6 +363,7 @@ body {
         text-transform: capitalize;
     }
 
+
     & h4.list-group-item-heading,
     & h5.list-group-speaker { 
         color: $body-dark;
@@ -394,7 +397,7 @@ body {
         }
 
         &.session-added {
-            background-color: $highlighter-app;
+            background-color: $highlighter-positive;
         }
 
         & .fa {
@@ -511,7 +514,7 @@ body {
         &.leader {
             & .fa {
             
-                color: $ista-brand-1;
+                color: $highlighter-app;
 
                 &:before {
                     content: '\f091';
@@ -602,7 +605,7 @@ body {
         color: #fff;
         border: none;
         border-bottom: $dash;
-        background-color: $highlighter-app;
+        background-color: $highlighter-positive;
         text-shadow: $main-shadow;
         font-size: 18px;
     }
@@ -620,7 +623,6 @@ body {
 }
 
 
-
 /* comments panel-heading */
 .panel-default > .panel-heading {
     background-color: $highlighter-app;
@@ -630,9 +632,10 @@ body {
     margin-bottom: -15px;.
     z-index: 1800;
     position: relative;
+    border-radius: 0;
 
     &.comments-title {
-        background-color: $body-gray;
+        background-color: $highlighter-app;
     }
 
     & h3 {
@@ -653,6 +656,7 @@ body {
             font-size: 1.25em;
             font-weight: bold;
             text-shadow: $main-shadow;
+            text-decoration: none;
 
             & .fa {
                 margin-right: 5px;
@@ -710,12 +714,12 @@ body {
         text-align: center;
         transition: 0.25s;
 
-/*         &:active {
-    transform: scale(1.2);
-}
- */
+        &:active {
+            transform: scale(1.2);
+        }
+
         &.not-added {
-            background-color: rgba(0,0,0,0.20);
+            background-color: rgba(0,0,0,0.60);
         }
 
         &.session-added {
@@ -991,7 +995,7 @@ body {
             }
 
             &.yes-rated {
-                background-color: $highlighter-app;
+                background-color: $highlighter-positive;
                 text-shadow: $main-shadow;
                 color: #fff;
             }
