@@ -43,8 +43,13 @@
         <p>You need to login to do that. Once you do, you'll be able to do other useful and interesting things.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Login</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Not now</button>
+         <ul class="login" ng-hide="userDetails.isLogged">
+             <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
+             <li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
+             <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
+             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>
+         </ul>
+         
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
