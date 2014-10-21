@@ -216,8 +216,6 @@ body {
         }
     }
 
-
-
     & .navbar-toggle {
         
         padding: 9px;
@@ -431,7 +429,6 @@ body {
             @extend .track-marker;
             min-height: 30px;
             background-color: $highlighter-neutral;
-            /* TODO: nth-child(odd/even) ?*/
         }
 
         & .badge { 
@@ -540,6 +537,59 @@ body {
     padding: 10px;
     margin-top: 15px;
 } 
+
+/* modal styling */
+
+.modal {
+
+    & .modal-dialog {
+
+        max-width: 80%;
+        margin: 30px auto;
+
+        & .modal-content {
+            border-radius: 0;
+            border: none;
+            background-color: $highlighter-app;
+            color: #fff;
+            font-size: 1.065em;
+            box-shadow: none;
+        }
+
+        & .modal-header,
+        & .modal-footer {
+            border: none;
+        }
+
+        & .modal-body {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        & .modal-title {
+           font-weight: bold;
+           font-size: 1.25em;
+        }
+
+        & .close {
+            color: #fff;
+            font-size: 35px;
+            text-shadow: none;
+            opacity: 0.95;
+            margin-top: -5px;
+        }
+    }
+}
+
+.modal-backdrop {
+    
+    background-color: #fff;
+
+    &.in {
+        opacity: 0.65;
+    }
+}
+
 
 /* input groups styling  */
 
