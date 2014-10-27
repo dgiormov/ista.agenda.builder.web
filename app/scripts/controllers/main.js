@@ -32,13 +32,6 @@ angular.module('istaAngularApp')
 				return "not-added"
 			}
 		}
-		$scope.isChecked = function(isSelected) {
-			if (isSelected) {
-				return "fa-check"
-			} else {
-				return "fa-plus"
-			}
-		}
 		$scope.filterSessions = function(willFilter) {
 			$scope.selected = willFilter;
 		}

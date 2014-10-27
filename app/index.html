@@ -41,14 +41,6 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div id="navbar-ex1-collapse" class="navbar-collapse collapse" style="height: 1px;" ng-controller="LoginCtrl">
 
-                <ul class="nav navbar-nav navbar-right login" ng-hide="userDetails.isLogged">
-                    <div class="login-holder">Login with:</div>
-                    <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-
                 <ul class="nav navbar-nav navbar-right login" ng-show="userDetails.isLogged">
                     <div class="logged-holder">Hello, {{userDetails.name}}!<a href="logout">Logout</a></li>
                 </ul>
