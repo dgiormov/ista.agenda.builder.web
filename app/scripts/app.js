@@ -40,7 +40,31 @@ angular
       });
   }).controller('LoginCtrl', function($scope, UserService){
 	  $scope.userDetails = UserService.get();
-  });
+  })/**
+   * $http interceptor.
+   * On 401 response (without 'ignoreAuthModule' option) stores the request
+   * and broadcasts 'event:auth-loginRequired'.
+   * On 403 response (without 'ignoreAuthModule' option) discards the request
+   * and broadcasts 'event:auth-forbidden'.
+   */
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.interceptors.push(['$rootScope', '$q', function($rootScope, $q, httpBuffer) {
+      return {
+        responseError: function(rejection) {
+            switch (rejection.status) {
+              case 401:
+                var deferred = $q.defer();
+                $('#loginModal').modal('show');
+                return deferred.promise;
+              case 403:
+                $('#loginModal').modal('show');
+                break;
+            }
+          return $q.reject(rejection);
+        }
+      };
+    }]);
+  }]);
 
 // quick and dirty fix for colapsable not closing
 jQuery(document).ready(function() {
