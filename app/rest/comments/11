@@ -4,20 +4,23 @@
         "name": "Darth Vader",
         "text": "test",
         "likes": 0,
-        "likedBy": ""
+        "likedBy": "",
+		"likedByMe": false
     },
     {
         "id": 2379,
         "name": "Emperor Palpatine",
         "text": "Cannot wait",
         "likes": 1,
-        "likedBy": "Darth Vader"
+        "likedBy": "Darth Vader",
+		"likedByMe": false
     },
     {
         "id": 2386,
         "name": "Princess Leia",
         "text": "Проба, проба, 1,2,3...работи микрофона;-)",
         "likes": 1,
-        "likedBy": "Han Solo"
+        "likedBy": "Han Solo",
+		"likedByMe": true
     }
 ]

@@ -8,7 +8,7 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, RatingService, PersonService) {
+	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, PersonService) {
 		$scope.descrClass="description-collapsed";
 		$scope.bioStatus = new Array();
 		$scope.session = sessionDetails.get({
@@ -38,7 +38,7 @@ angular.module('istaAngularApp')
 		}
 		$scope.refreshComments();
 		$scope.onSave = function() {
-		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment}).success(function(){
+		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment}, function(){
    				  $scope.refreshComments();
 		      });
 		}
@@ -78,6 +78,19 @@ angular.module('istaAngularApp')
    					}, function(response){
    						$scope.session.rating = 0;
    					});
+		}
+		
+		$scope.like = function(comment){
+	      sessionCommentsLike.save({"id": comment.id}, {}, function(){
+			  comment.likedByMe = !comment.likedByMe;
+			  if(comment.likedByMe){
+			  	comment.likes = comment.likes +1;
+			  } else {
+			  	comment.likes = comment.likes -1;
+			  }
+	      }, function(data){
+			  comment.likedByMe = false;
+	      });
 		}
 		$scope.getTrackClass = function(session) {
 			if(session.$resolved){

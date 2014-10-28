@@ -73,8 +73,8 @@
 					<span class="badge"></span>
 					<h4 class="list-group-item-heading">{{comment.name}}</h4>
 					<p class="list-group-item-text">{{comment.text}}</p>
-					<div class="comment-like">
-						<span>212</span>
+					<div class="comment-like" ng-class="comment.likedByMe ? 'comment-like-liked' : ''" ng-click=like(comment)>
+						<span>{{comment.likes}}</span>
 						<i class="fa fa-thumbs-up"></i>
 					</div>
 					<div class="comment-marker"></div>

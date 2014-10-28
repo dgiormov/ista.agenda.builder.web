@@ -56,7 +56,7 @@ angular
                 var deferred = $q.defer();
                 $('#loginModal').modal('show');
                 return deferred.promise;
-              case 403:
+              case 404:
                 $('#loginModal').modal('show');
                 break;
             }
