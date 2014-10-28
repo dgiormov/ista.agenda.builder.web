@@ -26,6 +26,10 @@ angular.module('istaAngularApp')
 				isSelected: !session.isSelected
 			}, function() {
 				session.isSelected = !session.isSelected;
+			}, function(response){
+				if(response.status == 401){
+				 	$('#loginModal').modal('show');
+				}
 			});
 		}
 		
@@ -37,8 +41,13 @@ angular.module('istaAngularApp')
 		}
 		$scope.refreshComments();
 		$scope.onSave = function() {
-		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment});
-			  $scope.refreshComments();
+		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment}).success(function(){
+   				  $scope.refreshComments();
+		      }).error(function(response){
+  				if(response.status == 401){
+  				 	$('#loginModal').modal('show');
+  				}
+		      });
 		}
 		$scope.expandColapse = function(){
 			if($scope.descrClass ==="description-expanded"){
@@ -73,8 +82,11 @@ angular.module('istaAngularApp')
    				  	sessionId: session.id,
    					rating: stars}, function(){
    						$scope.session.rating = stars;
-   					}, function(){
+   					}, function(response){
    						$scope.session.rating = 0;
+						if(response.status == 401){
+						 	$('#loginModal').modal('show');
+						}
    					});
 		}
 		$scope.getTrackClass = function(session) {

@@ -21,8 +21,10 @@ angular.module('istaAngularApp')
 				isSelected: !session.isSelected
 			}, function() {
 				session.isSelected = !session.isSelected;
-			}, function(){
-				 $('#loginModal').modal('show');
+			}, function(response){
+				if(response.status == 401){
+				 	$('#loginModal').modal('show');
+				}
 			});
 		}
 		$scope.isSelected = function(isSelected) {
