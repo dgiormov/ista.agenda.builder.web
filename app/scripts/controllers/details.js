@@ -89,7 +89,6 @@ angular.module('istaAngularApp')
 			  	comment.likes = comment.likes -1;
 			  }
 	      }, function(data){
-			  comment.likedByMe = false;
 	      });
 		}
 		$scope.getTrackClass = function(session) {

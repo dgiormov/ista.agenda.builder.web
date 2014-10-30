@@ -39,7 +39,12 @@ angular
         redirectTo: '/days/26'
       });
   }).controller('LoginCtrl', function($scope, UserService){
-	  $scope.userDetails = UserService.get();
+	  $scope.userDetails = UserService.get(function(data) {
+		  if(data.hasCookie && !data.isLogged){
+			  window.location = "authorize?provider=auto"
+		  }
+		  debugger;
+	  });
   })/**
    * $http interceptor.
    * On 401 response (without 'ignoreAuthModule' option) stores the request
@@ -56,7 +61,7 @@ angular
                 var deferred = $q.defer();
                 $('#loginModal').modal('show');
                 return deferred.promise;
-              case 404:
+              case 403:
                 $('#loginModal').modal('show');
                 break;
             }
