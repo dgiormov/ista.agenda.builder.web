@@ -17,7 +17,7 @@ $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
 $dash: 2px solid rgba(0,0,0,0.12);
 
 body {
-    background-color: $main-background; 
+    background-color: $main-background;
     font-family: 'PT Sans', 'Arial', 'Helvetica' sans-serif;
     padding-top: 60px;
 }
@@ -791,7 +791,6 @@ body {
 
 
 /* session logistics, start, duration, location */
-
 .session-name {
 
     padding: 10px 10px 20px 10px; 
@@ -858,7 +857,7 @@ body {
             }
 
             & .session-expander:after {
-                content: 'View Info';
+                content: 'Show Info';
             }
         }
 
@@ -888,8 +887,8 @@ body {
 
         & .session-expander {
 
-            color: #fff;
-            text-shadow: $main-shadow;
+            color: rgba(0,0,0,0.6);
+            text-shadow: none;
             font-size: 1em;
             font-weight: bold;
             position: absolute;
@@ -898,6 +897,7 @@ body {
 
             & .fa {
                 margin-right: 5px;
+                font-weight: bold;
             }
         }
     }
@@ -971,7 +971,7 @@ body {
             }
 
             & .session-expander:after {
-                content: 'View Bio';
+                content: 'Show Bio';
             }
         }
 
@@ -1003,9 +1003,12 @@ body {
             position: absolute;
             bottom: -15px;
             right: 5px;
+            color: rgba(0, 0, 0, 0.6);
+            text-shadow: none;
 
             & .fa {
                 margin-right: 5px;
+                font-weight: bold;
             }
         }
 

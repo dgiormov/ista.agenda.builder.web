@@ -2,7 +2,7 @@
 	<div class="panel-body">
 
 
-		<div class="row session-name">
+		<div class="row session-name" ng-click="expandColapse()">
 
 			<h4>{{session.name}}</h4>
 
@@ -11,7 +11,7 @@
 		    </div>
 
 			<div ng-class="descrClass" class="session-description">
-				<div class="session-expander" ng-click="expandColapse()"><i class="fa fa-angle-down"></i></div>
+				<div class="session-expander"><i class="fa fa-angle-down"></i></div>
 				<p>{{session.description}}</p>
 			</div>
 
@@ -21,12 +21,12 @@
 		<div class="row session-overall">
 
 			<ol ng-repeat="speaker in session.speakers">
-				<li>
+				<li ng-click="expandColapseBio($index)">
 					<i class="fa fa-user"></i>
 					<span class="speaker-name">{{speaker.name}}</span>
 					<div class="speaker-info">{{speaker.job_title}},<br>{{speaker.company}}</div>
 					<div ng-class="getBioClass($index)" class="bio-description">
-						<div class="session-expander" ng-click="expandColapseBio($index)"><i class="fa fa-angle-down"></i></div>
+						<div class="session-expander"><i class="fa fa-angle-down"></i></div>
 						<p>{{speaker.bio}}</p>
 					</div>
 					
