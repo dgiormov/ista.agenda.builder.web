@@ -38,14 +38,26 @@ angular
       .otherwise({
         redirectTo: '/days/26'
       });
-  }).controller('LoginCtrl', function($scope, UserService){
-	  $scope.userDetails = UserService.get(function(data) {
-		  if(data.hasCookie && !data.isLogged){
-			  window.location = "authorize?provider=auto"
-		  }
-		  debugger;
-	  });
-  })/**
+  }).controller('LoginCtrl', function($scope, UserService) {
+    $scope.userDetails = UserService.get(function(data) {
+      if (data.hasCookie && !data.isLogged) {
+        window.location = 'authorize?provider=auto';
+      }
+    });
+  }).controller('wellcomeModalCtrl', function($scope, $cookies) {
+    if (!$cookies.hideWellcome) {
+      $('#wellcomeModal').modal('show');
+    }
+    $scope.goToLogin = function() {
+      $('#loginModal').modal('show');
+      $scope.hide();
+    };
+
+    $scope.hide = function() {
+      $cookies.hideWellcome = true;
+    };
+  })
+  /**
    * $http interceptor.
    * On 401 response (without 'ignoreAuthModule' option) stores the request
    * and broadcasts 'event:auth-loginRequired'.
@@ -56,15 +68,15 @@ angular
     $httpProvider.interceptors.push(['$rootScope', '$q', function($rootScope, $q, httpBuffer) {
       return {
         responseError: function(rejection) {
-            switch (rejection.status) {
-              case 401:
-                var deferred = $q.defer();
-                $('#loginModal').modal('show');
-                return deferred.promise;
-              case 403:
-                $('#loginModal').modal('show');
-                break;
-            }
+          switch (rejection.status) {
+            case 401:
+              var deferred = $q.defer();
+              $('#loginModal').modal('show');
+              return deferred.promise;
+            case 403:
+              $('#loginModal').modal('show');
+              break;
+          }
           return $q.reject(rejection);
         }
       };

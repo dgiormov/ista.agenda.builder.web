@@ -76,9 +76,9 @@
         </nav>
         <div id="page-wrapper" class="container-fluid" ng-view=""></div>
     </div>
-	
-	
-	
+
+
+
 	<!-- Login dialog-->
 	<div class="modal fade" id="loginModal">
 	  <div class="modal-dialog">
@@ -98,15 +98,30 @@
 	             <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
 	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>
 	         </ul>
-         
+
 	      </div>
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 	<!-- End of Login dialog -->
-	
-	
-	
+
+  <!-- Welcome Modal dialog-->
+  <div class="modal fade" id="wellcomeModal" ng-controller="wellcomeModalCtrl">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Wellcone screen</h4>
+        </div>
+        <div class="modal-body">
+          <p>Text.....</p>
+          <button data-dismiss="modal" ng-click="goToLogin()">Log in</buttton>
+          <button data-dismiss="modal" ng-click="hide()">Not now</buttton>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- End of Welcome Modal dialog -->
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
