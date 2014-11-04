@@ -110,13 +110,27 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Wellcone screen</h4>
+            <h4 class="modal-title">Hi, thanks for downloading our app!</h4>
+            <p>We highly recommend that you log in&mdash;оnce you do, you'll be able to do more things!</p>
+            <button data-dismiss="modal" class="welcome-login" ng-click="goToLogin()">Log in</buttton>
+            <button data-dismiss="modal" class="welcome-dismiss" ng-click="hide()">Not now</buttton>
+
         </div>
         <div class="modal-body">
-          <p>Text.....</p>
-          <button data-dismiss="modal" ng-click="goToLogin()">Log in</buttton>
-          <button data-dismiss="modal" ng-click="hide()">Not now</buttton>
+            <h4>Organizers:</h4>
+            <img src="images/sponsor-logos/sap.jpg" alt="sap">
+            <img src="images/sponsor-logos/vmware.jpg" alt="vmware">
+            <img src="images/sponsor-logos/musala.jpg" alt="musala">
+            <img src="images/sponsor-logos/experian.png" alt="experian">
+            <img src="images/sponsor-logos/infragistics.jpg" alt="infragistics">
+            <h4>Sponsors:</h4>
+            <img src="images/sponsor-logos/skrill.jpg" alt="skrill">
+            <img src="images/sponsor-logos/axway.jpg" alt="axway">
+            <img src="images/sponsor-logos/orderdynamics.png" alt="orderdynamics">
+            <img src="images/sponsor-logos/paddypower.gif" alt="paddypower">
+            <img src="images/sponsor-logos/sbtech.jpg" alt="sbtech">
+            <img src="images/sponsor-logos/luxsoft.jpg" alt="luxsoft">
+            
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
