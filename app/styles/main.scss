@@ -96,8 +96,15 @@ body {
             }
         }
 
-        & .conference-day-agenda,
+        & .conference-day-agenda {
+
+            & .icon-holder {
+                background-color: darken($highlighter-app, 10%);
+            }
+        }
+
         & .hands-on-agenda {
+
             & .icon-holder {
                 background-color: $highlighter-app;
             }
@@ -129,6 +136,10 @@ body {
                 border-bottom: $dash;
                 text-shadow: $main-shadow;
                 font-size: 1.25em;
+
+                &.game-codes-holder {
+                    background-color: darken($highlighter-app, 20%);
+                }
             }
         }
 
@@ -220,15 +231,16 @@ body {
         
         padding: 9px;
         margin: 5px 10px;
-        border: 1px solid rgba(255,255,255,0.3);
+        border: 2px solid rgba(255,255,255,0.8);
         color: #fff;
+        transition: 0.3s;
 
         &:hover,
         &:focus { 
 
-            background-color: rgba(0,0,0,0.15);
+            background-color: $highlighter-positive;
             color: #fff;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
 
             & .icon-bar {
                 background-color: #fff;
@@ -498,12 +510,12 @@ body {
             margin-bottom: 0;
 
             & .ranking-marker {
-                background-color: $highlighter-app;
+                background-color: $highlighter-positive;
             } 
         }
 
         & .fa {
-            color: $highlighter-neutral;
+            color: $body-gray;
             width: 100%;
             font-size: 1.25em;
         }
@@ -511,7 +523,8 @@ body {
         &.leader {
             & .fa {
             
-                color: $highlighter-app;
+                color: $highlighter-positive;
+                font-size: 2.25em;
 
                 &:before {
                     content: '\f091';
@@ -810,7 +823,7 @@ body {
             top: 0;
             bottom: -2px;
             border-bottom: $dash;
-            background-color: $highlighter-app;
+            background-color: $highlighter-neutral;
         }
 
         & .input-group-addon {
@@ -847,6 +860,16 @@ body {
         background-color: $highlighter-positive;
         text-shadow: $main-shadow;
         font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
 
     & .input-marker {
