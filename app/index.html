@@ -97,7 +97,7 @@
 	             <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
 	             <li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
 	             <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
-	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>
+<!--	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>-->
 	         </ul>
 
 	      </div>
@@ -113,10 +113,18 @@
         <div class="modal-header">
             <h4 class="modal-title">Hi, thanks for downloading our app!</h4>
             <p>We highly recommend that you log in&mdash;оnce you do, you'll be able to do more things!</p>
-            <button data-dismiss="modal" class="welcome-login" ng-click="goToLogin()">Log in</buttton>
-            <button data-dismiss="modal" class="welcome-dismiss" ng-click="hide()">Not now</buttton>
-
+            <button class="welcome-login" ng-hide="showLogin" ng-click="goToLogin()">Log in</buttton>
+            <button data-dismiss="modal" class="welcome-dismiss" ng-hide="showLogin" ng-click="hide()">Not now</buttton>
         </div>
+        <div class="modal-header" ng-show="showLogin">
+            <h4 class="modal-title">Login with:</h4>
+			<ul class="login">
+				<li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
+				<!--	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>-->
+			</ul>
+		</div>
         <div class="modal-body">
             <h4>Organizers:</h4>
             <img src="images/sponsor-logos/sap.jpg" alt="sap">

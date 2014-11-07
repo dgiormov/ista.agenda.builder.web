@@ -45,12 +45,12 @@ angular
       }
     });
   }).controller('wellcomeModalCtrl', function($scope, $cookies) {
+	  $scope.showLogin = false;
     if (!$cookies.hideWellcome) {
       $('#wellcomeModal').modal('show');
     }
     $scope.goToLogin = function() {
-      $('#loginModal').modal('show');
-      $scope.hide();
+       $scope.showLogin = true;
     };
 
     $scope.hide = function() {
