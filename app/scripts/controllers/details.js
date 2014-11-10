@@ -40,6 +40,10 @@ angular.module('istaAngularApp')
 		$scope.onSave = function() {
 		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment}, function(){
    				  $scope.refreshComments();
+		      }, function(){
+				  $('#mTitle').html('Comments are disabled...');
+				  $('#mDesc').html('Comments will be enabled a few days before the conference starts.');
+		      	  $('#messageModal').modal('show');
 		      });
 		}
 		$scope.expandColapse = function(){
@@ -77,6 +81,9 @@ angular.module('istaAngularApp')
    						$scope.session.rating = stars;
    					}, function(response){
    						$scope.session.rating = 0;
+	  				  $('#mTitle').html('Session not yet started');
+	  				  $('#mDesc').html('Wait for the session to start.');
+	  		      	  $('#messageModal').modal('show');
    					});
 		}
 		

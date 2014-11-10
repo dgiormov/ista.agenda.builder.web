@@ -64,12 +64,12 @@
                         </div>
                         <a href="#/ranking">Game Codes &amp; Leaderboard</a>
                     </li>
-                    <li>
+                  <!--  <li>
                         <div class="icon-holder">
                             <i class="fa fa-code"></i>
                         </div>
                         <a href="#/codes">Chalenges</a>
-					</li>
+					</li>-->
 					
                 </ul>
 
@@ -94,7 +94,7 @@
 	      <div class="modal-footer">
 	        <h4 class="modal-title">Log in with:</h4>
 	         <ul class="login" ng-hide="userDetails.isLogged">
-	             <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
+<!--	             <li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>-->
 	             <li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
 	             <li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
 <!--	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>-->
@@ -105,13 +105,33 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 	<!-- End of Login dialog -->
+	
+		<!-- message dialog-->
+		<div class="modal fade" id="messageModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		        <h4 id="mTitle" class="modal-title">Tittle here:</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p id="mDesc"></p>
+		      </div>
+		      <div class="modal-footer">
+				 <button data-dismiss="modal" class="welcome-dismiss">Ok</buttton>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- End of Message dialog -->
+	
 
   <!-- Welcome Modal dialog-->
   <div class="modal fade" id="wellcomeModal" ng-controller="wellcomeModalCtrl">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-            <h4 class="modal-title">Hi, thanks for downloading our app!</h4>
+            <h4 class="modal-title">Hi, thanks for launching our app!</h4>
             <p>We highly recommend that you log in&mdash;оnce you do, you'll be able to do more things!</p>
             <button class="welcome-login" ng-hide="showLogin" ng-click="goToLogin()">Log in</buttton>
             <button data-dismiss="modal" class="welcome-dismiss" ng-hide="showLogin" ng-click="hide()">Not now</buttton>
@@ -119,7 +139,7 @@
         <div class="modal-header" ng-show="showLogin">
             <h4 class="modal-title">Login with:</h4>
 			<ul class="login">
-				<li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li>
+			<!--	<li><a class="facebook-login" href="authorize?provider=facebook"><i class="fa fa-facebook"></i></a></li> -->
 				<li><a class="twitter-login" href="authorize?provider=twitter"><i class="fa fa-twitter"></i></a></li>
 				<li><a class="gplus-login" href="authorize?provider=google"><i class="fa fa-google-plus"></i></a></li>
 				<!--	             <li><a class="linkedin-login" href="authorize?provider=linkedin"><i class="fa fa-linkedin"></i></a></li>-->

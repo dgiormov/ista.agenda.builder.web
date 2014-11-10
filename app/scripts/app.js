@@ -51,6 +51,7 @@ angular
     }
     $scope.goToLogin = function() {
        $scope.showLogin = true;
+       $cookies.hideWellcome = true;
     };
 
     $scope.hide = function() {
