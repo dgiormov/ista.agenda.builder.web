@@ -8,7 +8,7 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, PersonService) {
+	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, PersonService, shareService) {
 		$scope.descrClass="description-collapsed";
 		$scope.bioStatus = new Array();
 		$scope.session = sessionDetails.get({
@@ -119,5 +119,9 @@ angular.module('istaAngularApp')
 					return "fa-check";
 				}
 			}
+		}
+		
+		$scope.share = function(){
+			shareService.get();
 		}
 });

@@ -36,7 +36,7 @@ angular
         controller: 'RankingCtrl'
       })
       .otherwise({
-        redirectTo: '/days/26'
+        redirectTo: '/days/27'
       });
   }).controller('LoginCtrl', function($scope, UserService) {
     $scope.userDetails = UserService.get(function(data) {

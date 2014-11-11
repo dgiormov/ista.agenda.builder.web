@@ -12,8 +12,7 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "font-awesome": "~4.1.0",
-    "angular-pull-to-refresh": "~0.3.0"
+    "font-awesome": "~4.1.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

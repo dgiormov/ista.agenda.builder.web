@@ -7,7 +7,7 @@
  * # RankingCtrl
  * Controller of the istaAngularApp
  */
-angular.module('istaAngularApp', ['mgcrea.pullToRefresh'])
+angular.module('istaAngularApp')
   .controller('RankingCtrl', function ($scope, ranking, codes) {
     $scope.allRanking = ranking.get();
 	
