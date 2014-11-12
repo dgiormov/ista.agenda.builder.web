@@ -3,7 +3,7 @@
 
 
 		<div class="row session-name" ng-click="expandColapse()">
-
+			<back-button></back-button>
 			<h4>{{session.name}}</h4>
 
 		    <div ng-class="isAdded(true)" class="add-session" ng-click="addSession(session)">
@@ -29,7 +29,7 @@
 						<div class="session-expander"><i class="fa fa-angle-down"></i></div>
 						<p>{{speaker.bio}}</p>
 					</div>
-					
+
 				</li>
 			</ol>
 		</div>
