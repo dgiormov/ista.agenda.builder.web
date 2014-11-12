@@ -67,6 +67,19 @@ body {
         &:focus {
             color: #fff;
         }
+
+        &:active .fa-home {
+            top: -10px;
+        }
+
+        & .fa-home {
+            float: right;
+            color: $highlighter-positive;
+            position: relative;
+            left: -7px;
+            top: -3px;
+            transition: 0.5s;
+        }
     }
 
     & .navbar-header {
@@ -1233,12 +1246,17 @@ body {
     }
 }
 
+.session-speaker {
+    border-bottom: $dash;
+}
 
 .session-rating,
 .session-speaker {
+    margin-top: 10px;
     padding: 10px;
     background-color: #fff;
     text-align: center;
+    border-bottom: $dash;
 
     & .rate-title {
         display: inline-block;
