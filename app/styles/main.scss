@@ -686,6 +686,11 @@ body {
             }
         }
 
+        & .modal-login-header {
+            background-color: darken($highlighter-app, 10%);
+            transition: 0.5s;
+        }
+
         & .modal-body {
 
             text-align: center;
@@ -728,7 +733,8 @@ body {
             color: #fff;
             border-color: #fff;
 
-            &:active {
+            &:active,
+            &:focus {
                 background-color: #fff;
                 color: $highlighter-app;
             }
@@ -1428,6 +1434,29 @@ body {
     .list-group-item a {
         width: 80%;
     }
+
+    #wellcomeModal {
+
+         & .modal-dialog {
+
+            width: 100%;
+                
+            & .modal-body {
+                text-align: left;
+            }
+
+         }
+
+         & img {
+            max-width: 13%!important; /* due to broken inception rule in regular css */
+            margin-right: 25px!important; /* due to broken inception rule in regular css */
+
+
+         }
+    }
+   
+
+
 
 }
 
