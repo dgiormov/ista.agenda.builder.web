@@ -39,6 +39,10 @@ angular
         templateUrl: 'views/ratingdetails.html',
         controller: 'RatingDetailsCtrl'
       })
+	  .when('/achievements', {
+        templateUrl: 'views/achievements.html',
+        controller: 'AchievementsCtrl'
+      })
       .otherwise({
         redirectTo: '/days/27'
       });
@@ -85,6 +89,7 @@ angular
 			case 405:
 			case 406:
 			case 409:
+			case 412:
 			case 428:
 				  $('#mTitle').html('Error');
 				  $('#mDesc').html(rejection.message);
