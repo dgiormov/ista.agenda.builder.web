@@ -618,6 +618,28 @@ body {
             opacity: 0.95;
             margin-top: -5px;
         }
+
+        & button {
+            padding: 7px 11px;
+            background: transparent;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 7px;
+            font-size: 1.068em;
+            margin-right: 15px;
+            font-weight: bolder;
+            transition: 0.3s;
+            border-color: #fff;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                background-color: #fff;
+                color: $highlighter-app;
+            }
+        }
     }
 
     /* social icons */
