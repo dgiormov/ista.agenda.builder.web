@@ -8,9 +8,8 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, PersonService, shareService) {
-		$scope.descrClass="description-collapsed";
-		$scope.bioStatus = new Array();
+	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, SpeakerRatingService, PersonService, shareService) {
+
 		$scope.session = sessionDetails.get({
 			id: $routeParams.id
 		}, function(){
@@ -37,14 +36,92 @@ angular.module('istaAngularApp')
 			$scope.comment = "";
 		}
 		$scope.refreshComments();
-		$scope.onSave = function() {
+		$scope.postComment = function() {
 		      sessionComments.save({ session_id: $routeParams.id}, {data: $scope.comment}, function(){
    				  $scope.refreshComments();
 		      }, function(){
-				  $('#mTitle').html('Comments are disabled...');
-				  $('#mDesc').html('Comments will be enabled a few days before the conference starts.');
-		      	  $('#messageModal').modal('show');
 		      });
+		}
+
+		
+		$scope.rateSession = function(stars, session){
+   		 new RatingService().$save({
+   				  	sessionId: session.id,
+   					rating: stars}, function(){
+   						$scope.session.rating = stars;
+   					}, function(response){
+   						$scope.session.rating = 0;
+   					});
+		}
+		
+		$scope.rateSpeaker = function(stars, session){
+   		 new SpeakerRatingService().$save({
+   				  	sessionId: session.id,
+   					rating: stars}, function(){
+   						$scope.session.speakerRating = stars;
+   					}, function(response){
+   						$scope.session.speakerRating = 0;
+   					});
+		}
+		
+		$scope.like = function(comment){
+	      sessionCommentsLike.save({"id": comment.id}, {}, function(){
+			  comment.likedByMe = !comment.likedByMe;
+			  if(comment.likedByMe){
+			  	comment.likes = comment.likes +1;
+			  } else {
+			  	comment.likes = comment.likes -1;
+			  }
+	      }, function(data){
+	      });
+		}
+		
+				
+		$scope.share = function(){
+			shareService.get();
+		}
+//////////////////////// Dynamic class selection ///////////////////////////
+		$scope.descrClass="description-collapsed";
+		$scope.bioStatus = new Array();
+		
+		$scope.getSpeakerStarClass = function(starNumber){
+			if(starNumber <= $scope.session.speakerRating){
+				return "yes-rated";
+			} else {
+				return "not-rated";
+			}
+		}
+		
+		$scope.getSessionStarClass = function(starNumber){
+			if(starNumber <= $scope.session.rating){
+				return "yes-rated";
+			} else {
+				return "not-rated";
+			}
+		}
+		
+		$scope.isAdded = function(outer){
+			if(!$scope.session.isSelected){
+				if(outer){
+					return "not-added";
+				} else{
+					return "fa-plus";
+				}
+			} else {
+				if(outer){
+					return "session-added";
+				} else{
+					return "fa-check";
+				}
+			}
+		}
+		
+		$scope.getTrackClass = function(session) {
+			if(session.$resolved){
+				return session.track.replace(" ", "-").toLowerCase();				
+			} else {
+				return "";
+			}
 		}
 		$scope.expandColapse = function(){
 			if($scope.descrClass ==="description-expanded"){
@@ -67,58 +144,7 @@ angular.module('istaAngularApp')
 		}
 		
 		
-		$scope.getStarSelectedClass = function(starNumber){
-			if(starNumber <= $scope.session.rating){
-				return "yes-rated";
-			} else {
-				return "not-rated";
-			}
-		}
-		$scope.rate = function(stars, session){
-   		 new RatingService().$save({
-   				  	sessionId: session.id,
-   					rating: stars}, function(){
-   						$scope.session.rating = stars;
-   					}, function(response){
-   						$scope.session.rating = 0;
-   					});
-		}
 		
-		$scope.like = function(comment){
-	      sessionCommentsLike.save({"id": comment.id}, {}, function(){
-			  comment.likedByMe = !comment.likedByMe;
-			  if(comment.likedByMe){
-			  	comment.likes = comment.likes +1;
-			  } else {
-			  	comment.likes = comment.likes -1;
-			  }
-	      }, function(data){
-	      });
-		}
-		$scope.getTrackClass = function(session) {
-			if(session.$resolved){
-				return session.track.replace(" ", "-").toLowerCase();				
-			} else {
-				return "";
-			}
-		}
-		$scope.isAdded = function(outer){
-			if(!$scope.session.isSelected){
-				if(outer){
-					return "not-added";
-				} else{
-					return "fa-plus";
-				}
-			} else {
-				if(outer){
-					return "session-added";
-				} else{
-					return "fa-check";
-				}
-			}
-		}
 		
-		$scope.share = function(){
-			shareService.get();
-		}
+		
 });

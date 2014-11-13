@@ -8,12 +8,16 @@
  * Service in the istaAngularApp.
  */
 angular.module('istaAngularApp')
-  .service('sessionDetails', function sessionDetails($resource) {
+  .service('sessionDetails', function($resource) {
   	return $resource('rest/sessions/:id');
   })
-  .service('RatingService', function sessionDetails($resource) {
+  .service('RatingService', function($resource) {
   	return $resource('rest/rating/session');
   })
-  .service('shareService', function sessionDetails($resource) {
+  .service('SpeakerRatingService', function($resource) {
+  	return $resource('rest/rating/speaker');
+  })
+  
+  .service('shareService', function($resource) {
   	return $resource('rest/share');
   });

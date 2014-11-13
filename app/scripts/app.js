@@ -92,7 +92,7 @@ angular
 			case 412:
 			case 428:
 				  $('#mTitle').html('Error');
-				  $('#mDesc').html(rejection.message);
+				  $('#mDesc').html(rejection.data.message);
 		      	  $('#messageModal').modal('show');
 				  break;
           }

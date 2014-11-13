@@ -54,23 +54,23 @@
 			<div class="col col-sm-12 col-md-6 session-rating">
 				<div class="rate-title">Enjoyed the Session?</div>
 				<ul class="rate-stars">
-					<li class="rate-star" ng-class="getStarSelectedClass(1)" ng-click="rate(1,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(2)" ng-click="rate(2,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(3)" ng-click="rate(3,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(4)" ng-click="rate(4,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(5)" ng-click="rate(5,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSessionStarClass(1)" ng-click="rateSession(1,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSessionStarClass(2)" ng-click="rateSession(2,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSessionStarClass(3)" ng-click="rateSession(3,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSessionStarClass(4)" ng-click="rateSession(4,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSessionStarClass(5)" ng-click="rateSession(5,session)"><i class="fa fa-star"></i></li>
 				</ul>
 				<div class="rating-marker"></div>
 			</div>
 
 			<div class="col col-sm-12 col-md-6 session-speaker">
-				<div class="rate-title">How about the Speaker?</div>
+				<div class="rate-title">How about the Speaker(s)?</div>
 				<ul class="rate-stars">
-					<li class="rate-star" ng-class="getStarSelectedClass(1)" ng-click="rate(1,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(2)" ng-click="rate(2,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(3)" ng-click="rate(3,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(4)" ng-click="rate(4,session)"><i class="fa fa-star"></i></li>
-					<li class="rate-star" ng-class="getStarSelectedClass(5)" ng-click="rate(5,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSpeakerStarClass(1)" ng-click="rateSpeaker(1,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSpeakerStarClass(2)" ng-click="rateSpeaker(2,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSpeakerStarClass(3)" ng-click="rateSpeaker(3,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSpeakerStarClass(4)" ng-click="rateSpeaker(4,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getSpeakerStarClass(5)" ng-click="rateSpeaker(5,session)"><i class="fa fa-star"></i></li>
 				</ul>
 				<div class="rating-marker"></div>
 			</div>
@@ -102,7 +102,7 @@
 			    	<textarea class="form-control" rows="3" ng-model="comment"></textarea>
 				<div>
 					<span class="input-group-btn">
-				        <button class="btn btn-default" type="button" ng-click="onSave()">Post</button>
+				        <button class="btn btn-default" type="button" ng-click="postComment()">Post</button>
 					</span>
 				</div>
 				<div class="input-marker"></div>
