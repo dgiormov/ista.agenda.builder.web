@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/ranking.html',
         controller: 'RankingCtrl'
       })
+      .when('/ranking/:id', {
+        templateUrl: 'views/ratingdetails.html',
+        controller: 'RatingDetailsCtrl'
+      })
       .otherwise({
         redirectTo: '/days/27'
       });

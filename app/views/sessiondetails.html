@@ -3,7 +3,7 @@
 
 
 		<div class="row session-name" ng-click="expandColapse()">
-
+			<back-button></back-button>
 			<h4>{{session.name}}</h4>
 
 		    <div ng-class="isAdded(true)" class="add-session" ng-click="addSession(session)">
@@ -29,9 +29,24 @@
 						<div class="session-expander"><i class="fa fa-angle-down"></i></div>
 						<p>{{speaker.bio}}</p>
 					</div>
-					
+
 				</li>
 			</ol>
+		</div>
+
+
+		<div class="row">
+			
+			<div class="col col-sm-12 col-md-12">
+
+				<div class="row session-logistics" ng-class="getTrackClass(session)">
+					<div class="session-start"><i class="fa fa-clock-o"></i>{{session.startTimeString}}</div>
+					<div class="session-duration">{{session.duration}} min</div>
+					<div class="session-location"><i class="fa fa-map-marker"></i>{{session.room}}</div>
+				</div>
+
+			</div>
+
 		</div>
 
 		<div class="row">
@@ -48,14 +63,16 @@
 				<div class="rating-marker"></div>
 			</div>
 
-			<div class="col col-sm-12 col-md-6">
-
-				<div class="row session-logistics" ng-class="getTrackClass(session)">
-					<div class="session-start"><i class="fa fa-clock-o"></i>{{session.startTimeString}}</div>
-					<div class="session-duration">{{session.duration}} min</div>
-					<div class="session-location"><i class="fa fa-map-marker"></i>{{session.room}}</div>
-				</div>
-
+			<div class="col col-sm-12 col-md-6 session-speaker">
+				<div class="rate-title">How about the Speaker?</div>
+				<ul class="rate-stars">
+					<li class="rate-star" ng-class="getStarSelectedClass(1)" ng-click="rate(1,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(2)" ng-click="rate(2,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(3)" ng-click="rate(3,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(4)" ng-click="rate(4,session)"><i class="fa fa-star"></i></li>
+					<li class="rate-star" ng-class="getStarSelectedClass(5)" ng-click="rate(5,session)"><i class="fa fa-star"></i></li>
+				</ul>
+				<div class="rating-marker"></div>
 			</div>
 
 		</div>
