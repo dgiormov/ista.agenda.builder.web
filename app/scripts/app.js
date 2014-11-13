@@ -77,6 +77,15 @@ angular
             case 403:
               $('#loginModal').modal('show');
               break;
+		  	case 400:
+			case 405:
+			case 406:
+			case 409:
+			case 428:
+				  $('#mTitle').html('Error');
+				  $('#mDesc').html(rejection.message);
+		      	  $('#messageModal').modal('show');
+				  break;
           }
           return $q.reject(rejection);
         }

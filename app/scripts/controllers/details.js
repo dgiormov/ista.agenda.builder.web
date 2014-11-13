@@ -81,9 +81,6 @@ angular.module('istaAngularApp')
    						$scope.session.rating = stars;
    					}, function(response){
    						$scope.session.rating = 0;
-	  				  $('#mTitle').html('Session not yet started');
-	  				  $('#mDesc').html('Wait for the session to start.');
-	  		      	  $('#messageModal').modal('show');
    					});
 		}
 		

@@ -13,19 +13,19 @@ angular.module('istaAngularApp')
 		$scope.sessions = session.query({
 			date: $routeParams.id
 		});
-		$scope.rotating = "";
-		$scope.addSession = function(session, $event) {
+		$scope.rotating = new Array();
+		$scope.addSession = function(session, $event, $index) {
 			$event.preventDefault();
 			new PersonService().$save({
 				id: session.id,
 				isSelected: !session.isSelected
 			}, function() {
-				$scope.rotating = "fa-spin fa-spinner";
+				$scope.rotating[$index] = "";
 				session.isSelected = !session.isSelected;
 			}, function(response){
-				$scope.rotating = "";
+				$scope.rotating[$index] = "";
 			});
-			$scope.rotating = "fa-spin fa-refresh";
+			$scope.rotating[$index] = "fa-spin fa-spinner";
 			
 		}
 		$scope.isSelected = function(isSelected) {
@@ -57,8 +57,8 @@ angular.module('istaAngularApp')
 			return false;
 		}
 		
-		$scope.isRotating = function(){
-			return $scope.rotating;
+		$scope.isRotating = function($index){
+			return $scope.rotating[$index];
 		}
 	})
 	.filter('isSelectedElement', function() {

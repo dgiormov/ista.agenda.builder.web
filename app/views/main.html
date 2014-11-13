@@ -16,8 +16,8 @@
           <h5 class="list-group-speaker"><span ng-repeat="name in session.speakers"> {{name}} </span></h5>
         </a>
 
-        <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session, $event)">
-          <i ng-class="isRotating()" class="fa fa-check"></i> 
+        <div class="add-session" ng-class="isSelected(session.isSelected)" ng-click="addSession(session, $event, $index)">
+          <i ng-class="isRotating($index)" class="fa fa-check"></i> 
         </div>
 
         <h3 class="list-group-track">{{session.track}}</h3>
