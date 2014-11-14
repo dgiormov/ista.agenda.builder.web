@@ -1390,7 +1390,7 @@ body {
     }
 
     .navbar-default .navbar-header {
-        width: 70%;
+        width: 100%;
     }
 
     .navbar-default .navbar-collapse {
@@ -1399,15 +1399,17 @@ body {
     }
 
     .navbar-default .navbar-nav.login {
-        width: 100%;
+        width: 280px;
         margin: 0;
+        position: fixed;
+        top: 60px;
     }
 
     .navbar-default .navbar-nav li > a,
     .navbar-default .navbar-nav.login .login-holder {
         padding: 13px 0px 12px 0px;
     }
-    
+
     .navbar-default .navbar-nav li:active {
         transform: none;
         background: darken(#fff, 15%)!important;
@@ -1418,7 +1420,7 @@ body {
     }
 
     .login {
-        padding-right: 30px;
+        padding-right: 10px;
     }
 
     #wrapper {
@@ -1432,7 +1434,7 @@ body {
 
     .side-nav {
         position: fixed;
-        top: 61px;
+        top: 135px;
         background-color: #FFF;
         left: 15px;
         width: 280px;
