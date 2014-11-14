@@ -109,18 +109,28 @@ body {
             }
         }
 
-        & .conference-day-agenda {
-
-            & .icon-holder {
-                background-color: darken($highlighter-app, 10%);
-            }
+        & .icon-holder.icon-holder.hands-on-agenda {
+            background-color: darken($highlighter-app, 25%);
         }
 
-        & .hands-on-agenda {
+        & .icon-holder.conference-day-agenda {
+            background-color: darken($highlighter-app, 20%);
+        }
 
-            & .icon-holder {
-                background-color: $highlighter-app;
-            }
+        & .icon-holder.game-codes-holder {
+            background-color: darken($highlighter-app, 15%);
+        }
+
+        & .icon-holder.achievements-holder {
+            background-color: darken($highlighter-app, 10%);
+        }
+
+        & .icon-holder.challanges-holder {
+            background-color: darken($highlighter-app, 5%);
+        }
+
+        & .icon-holder.partners-holder {
+            background-color: darken($highlighter-app, 0%);
         }
 
         & li {
@@ -149,10 +159,6 @@ body {
                 border-bottom: $dash;
                 text-shadow: $main-shadow;
                 font-size: 1.25em;
-
-                &.game-codes-holder {
-                    background-color: darken($highlighter-app, 20%);
-                }
             }
         }
 
