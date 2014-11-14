@@ -109,18 +109,28 @@ body {
             }
         }
 
-        & .conference-day-agenda {
-
-            & .icon-holder {
-                background-color: darken($highlighter-app, 10%);
-            }
+        & .icon-holder.icon-holder.hands-on-agenda {
+            background-color: darken($highlighter-app, 25%);
         }
 
-        & .hands-on-agenda {
+        & .icon-holder.conference-day-agenda {
+            background-color: darken($highlighter-app, 20%);
+        }
 
-            & .icon-holder {
-                background-color: $highlighter-app;
-            }
+        & .icon-holder.game-codes-holder {
+            background-color: darken($highlighter-app, 15%);
+        }
+
+        & .icon-holder.achievements-holder {
+            background-color: darken($highlighter-app, 10%);
+        }
+
+        & .icon-holder.challanges-holder {
+            background-color: darken($highlighter-app, 5%);
+        }
+
+        & .icon-holder.partners-holder {
+            background-color: darken($highlighter-app, 0%);
         }
 
         & li {
@@ -149,10 +159,6 @@ body {
                 border-bottom: $dash;
                 text-shadow: $main-shadow;
                 font-size: 1.25em;
-
-                &.game-codes-holder {
-                    background-color: darken($highlighter-app, 20%);
-                }
             }
         }
 
@@ -617,6 +623,28 @@ body {
             text-shadow: none;
             opacity: 0.95;
             margin-top: -5px;
+        }
+
+        & button {
+            padding: 7px 11px;
+            background: transparent;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 7px;
+            font-size: 1.068em;
+            margin-right: 15px;
+            font-weight: bolder;
+            transition: 0.3s;
+            border-color: #fff;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                background-color: #fff;
+                color: $highlighter-app;
+            }
         }
     }
 
@@ -1368,7 +1396,7 @@ body {
     }
 
     .navbar-default .navbar-header {
-        width: 70%;
+        width: 100%;
     }
 
     .navbar-default .navbar-collapse {
@@ -1377,17 +1405,15 @@ body {
     }
 
     .navbar-default .navbar-nav.login {
-        width: 100%;
+        width: 280px;
         margin: 0;
+        position: fixed;
+        top: 60px;
     }
 
     .navbar-default .navbar-nav li > a,
     .navbar-default .navbar-nav.login .login-holder {
         padding: 13px 0px 12px 0px;
-    }
-
-    .navbar-default .navbar-nav li > a span {
-        float: left;
     }
 
     .navbar-default .navbar-nav li:active {
@@ -1400,7 +1426,7 @@ body {
     }
 
     .login {
-        padding-right: 30px;
+        padding-right: 10px;
     }
 
     #wrapper {
@@ -1414,10 +1440,10 @@ body {
 
     .side-nav {
         position: fixed;
-        top: 61px;
+        top: 135px;
         background-color: #FFF;
         left: 15px;
-        width: 230px;
+        width: 280px;
         margin-left: -225px;
         border: none;
         border-radius: 0;
@@ -1425,8 +1451,8 @@ body {
 
     }
 
-    .side-nav>li>a {
-        width: 225px;
+    .side-nav > li > a {
+        width: 275px;
     }
 
 
