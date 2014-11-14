@@ -1407,11 +1407,7 @@ body {
     .navbar-default .navbar-nav.login .login-holder {
         padding: 13px 0px 12px 0px;
     }
-
-    .navbar-default .navbar-nav li > a span {
-        float: left;
-    }
-
+    
     .navbar-default .navbar-nav li:active {
         transform: none;
         background: darken(#fff, 15%)!important;
@@ -1439,7 +1435,7 @@ body {
         top: 61px;
         background-color: #FFF;
         left: 15px;
-        width: 230px;
+        width: 280px;
         margin-left: -225px;
         border: none;
         border-radius: 0;
@@ -1447,8 +1443,8 @@ body {
 
     }
 
-    .side-nav>li>a {
-        width: 225px;
+    .side-nav > li > a {
+        width: 275px;
     }
 
 
