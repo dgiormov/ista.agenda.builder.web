@@ -3,58 +3,69 @@
 		"id": 844,
 		"name": "Random Guy",
 		"points": 10,
-		"position": 82
+		"position": 82,
+		"rank": "rank1"
 	},
 	"ranking": [{
 		"id": 2122,
 		"name": "Random Guy",
 		"points": 303,
-		"position": 1
+		"position": 1,
+		"rank": "rank3"
 	}, {
 		"id": 2493,
 		"name": "Random Guy",
 		"points": 292,
-		"position": 2
+		"position": 2,
+		"rank": "rank3"
 	}, {
 		"id": 2396,
 		"name": "Random Guy",
 		"points": 258,
-		"position": 3
+		"position": 3,
+		"rank": "rank3"
 	}, {
 		"id": 1756,
 		"name": "Random Guy",
 		"points": 229,
-		"position": 4
+		"position": 4,
+		"rank": "rank2"
 	}, {
 		"id": 1861,
 		"name": "Random Guy",
 		"points": 205,
-		"position": 5
+		"position": 5,
+		"rank": "rank3"
 	}, {
 		"id": 2501,
 		"name": "Random Guy",
 		"points": 162,
-		"position": 6
+		"position": 6,
+		"rank": "rank2"
 	}, {
 		"id": 778,
 		"name": "Random Guy",
 		"points": 151,
-		"position": 7
+		"position": 7,
+		"rank": "rank1"
 	}, {
 		"id": 2402,
 		"name": "Random Guy",
 		"points": 148,
-		"position": 8
+		"position": 8,
+		"rank": "rank1"
 	}, {
 		"id": 2414,
 		"name": "Random Guy",
 		"points": 146,
-		"position": 9
+		"position": 9,
+		"rank": "rank1"
 	}, {
 		"id": 1745,
 		"name": "Random Guy",
 		"points": 142,
-		"position": 10
+		"position": 10,
+		"rank": "rank1"
 	}, {
 		"id": 2565,
 		"name": "Random Guy",
@@ -64,212 +75,254 @@
 		"id": 1926,
 		"name": "Random Guy",
 		"points": 135,
-		"position": 12
+		"position": 12,
+		"rank": "rank1"
 	}, {
 		"id": 1928,
 		"name": "Random Guy",
 		"points": 132,
-		"position": 13
+		"position": 13,
+		"rank": "rank1"
 	}, {
 		"id": 846,
 		"name": "Random Guy",
 		"points": 130,
-		"position": 14
+		"position": 14,
+		"rank": "rank0"
 	}, {
 		"id": 2497,
 		"name": "Random Guy",
 		"points": 108,
-		"position": 15
+		"position": 15,
+		"rank": "rank1"
 	}, {
 		"id": 780,
 		"name": "Random Guy",
 		"points": 102,
-		"position": 16
+		"position": 16,
+		"rank": "rank1"
 	}, {
 		"id": 2494,
 		"name": "Random Guy",
 		"points": 100,
-		"position": 17
+		"position": 17,
+		"rank": "rank1"
 	}, {
 		"id": 2317,
 		"name": "Random Guy",
 		"points": 95,
-		"position": 18
+		"position": 18,
+		"rank": "rank1"
 	}, {
 		"id": 2394,
 		"name": "Random Guy",
 		"points": 95,
-		"position": 18
+		"position": 18,
+		"rank": "rank1"
 	}, {
 		"id": 865,
 		"name": "Random Guy",
 		"points": 93,
-		"position": 20
+		"position": 20,
+		"rank": "rank1"
 	}, {
 		"id": 855,
 		"name": "Random Guy",
 		"points": 90,
-		"position": 21
+		"position": 21,
+		"rank": "rank1"
 	}, {
 		"id": 1778,
 		"name": "Random Guy",
 		"points": 90,
-		"position": 21
+		"position": 21,
+		"rank": "rank1"
 	}, {
 		"id": 1871,
 		"name": "Random Guy",
 		"points": 90,
-		"position": 21
+		"position": 21,
+		"rank": "rank1"
 	}, {
 		"id": 1828,
 		"name": "Random Guy",
 		"points": 89,
-		"position": 24
+		"position": 24,
+		"rank": "rank1"
 	}, {
 		"id": 776,
 		"name": "Random Guy",
 		"points": 86,
-		"position": 25
+		"position": 25,
+		"rank": "rank1"
 	}, {
 		"id": 2349,
 		"name": "Random Guy",
 		"points": 85,
-		"position": 26
+		"position": 26,
+		"rank": "rank1"
 	}, {
 		"id": 1744,
 		"name": "Random Guy",
 		"points": 82,
-		"position": 27
+		"position": 27,
+		"rank": "rank1"
 	}, {
 		"id": 1764,
 		"name": "Random Guy",
 		"points": 80,
-		"position": 28
+		"position": 28,
+		"rank": "rank1"
 	}, {
 		"id": 1838,
 		"name": "Random Guy",
 		"points": 75,
-		"position": 29
+		"position": 29,
+		"rank": "rank1"
 	}, {
 		"id": 1880,
 		"name": "Random Guy",
 		"points": 75,
-		"position": 29
+		"position": 29,
+		"rank": "rank1"
 	}, {
 		"id": 1771,
 		"name": "Random Guy",
 		"points": 71,
-		"position": 31
+		"position": 31,
+		"rank": "rank1"
 	}, {
 		"id": 1742,
 		"name": "Random Guy",
 		"points": 70,
-		"position": 32
+		"position": 32,
+		"rank": "rank1"
 	}, {
 		"id": 2203,
 		"name": "Random Guy",
 		"points": 70,
-		"position": 32
+		"position": 32,
+		"rank": "rank1"
 	}, {
 		"id": 2495,
 		"name": "Random Guy",
 		"points": 70,
-		"position": 32
+		"position": 32,
+		"rank": "rank1"
 	}, {
 		"id": 1805,
 		"name": "Random Guy",
 		"points": 67,
-		"position": 35
+		"position": 35,
+		"rank": "rank1"
 	}, {
 		"id": 2313,
 		"name": "Random Guy",
 		"points": 67,
-		"position": 35
+		"position": 35,
+		"rank": "rank1"
 	}, {
 		"id": 2312,
 		"name": "Random Guy",
 		"points": 65,
-		"position": 37
+		"position": 37,
+		"rank": "rank1"
 	}, {
 		"id": 1857,
 		"name": "Random Guy",
 		"points": 62,
-		"position": 38
+		"position": 38,
+		"rank": "rank1"
 	}, {
 		"id": 1802,
 		"name": "Random Guy",
 		"points": 60,
-		"position": 39
+		"position": 39,
+		"rank": "rank1"
 	}, {
 		"id": 2052,
 		"name": "Random Guy",
 		"points": 56,
-		"position": 40
+		"position": 40,
+		"rank": "rank1"
 	}, {
 		"id": 2101,
 		"name": "Random Guy",
 		"points": 55,
-		"position": 41
+		"position": 41,
+		"rank": "rank1"
 	}, {
 		"id": 2415,
 		"name": "Random Guy",
 		"points": 55,
-		"position": 41
+		"position": 41,
+		"rank": "rank1"
 	}, {
 		"id": 2045,
 		"name": "Random Guy",
 		"points": 50,
-		"position": 43
+		"position": 43,
+		"rank": "rank1"
 	}, {
 		"id": 2252,
 		"name": "Random Guy",
 		"points": 50,
-		"position": 43
+		"position": 43,
+		"rank": "rank1"
 	}, {
 		"id": 2304,
 		"name": "Random Guy",
 		"points": 50,
-		"position": 43
+		"position": 43,
+		"rank": "rank1"
 	}, {
 		"id": 1908,
 		"name": "Random Guy",
 		"points": 46,
-		"position": 46
+		"position": 46,
+		"rank": "rank1"
 	}, {
 		"id": 2550,
 		"name": "Random Guy",
 		"points": 46,
-		"position": 46
+		"position": 46,
+		"rank": "rank1"
 	}, {
 		"id": 1852,
 		"name": "Random Guy",
 		"points": 45,
-		"position": 48
+		"position": 48,
+		"rank": "rank1"
 	}, {
 		"id": 2098,
 		"name": "Random Guy",
 		"points": 45,
-		"position": 48
+		"position": 48,
+		"rank": "rank1"
 	}, {
 		"id": 851,
 		"name": "Random Guy",
 		"points": 41,
-		"position": 50
+		"position": 50,
+		"rank": "rank1"
 	}, {
 		"id": 2114,
 		"name": "Random Guy",
 		"points": 41,
-		"position": 50
+		"position": 50,
+		"rank": "rank1"
 	}, {
 		"id": 2397,
 		"name": "Random Guy",
 		"points": 40,
-		"position": 52
+		"position": 52,
+		"rank": "rank1"
 	}, {
 		"id": 2499,
 		"name": "Random Guy",
 		"points": 40,
-		"position": 52
+		"position": 52,
+		"rank": "rank1"
 	}, {
 		"id": 2444,
 		"name": "Random Guy",
