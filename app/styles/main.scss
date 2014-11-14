@@ -557,6 +557,97 @@ body {
     }
 }
 
+.user-info-name { 
+
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    border-bottom: $dash;
+    margin-top: 10px;
+
+    & .fa {
+        font-size: 1.5em;
+        color: rgba(0,0,0,0.4);
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    & h4 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $body-dark;
+        display: inline-block;
+    }
+
+    & .user-marker {
+        background-color: $highlighter-app;
+        min-height: 50px;
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: -2px;
+        border-bottom: $dash;
+    }
+}
+
+
+/* table styling */
+
+.user-stats {
+
+    font-size: 1.068em;
+
+    tr, td {
+        border: none!important;
+    }
+
+    td {
+        padding: 2px 0px !important;
+    }
+
+    & td div {
+        border-bottom: none;
+        background-color: #fff;
+        border-bottom: $dash;
+    }
+
+    & td .stats-name {
+        padding: 15px 0px 15px 15px;
+    }
+
+    & td .stats-points {
+        padding: 15px 15px 15px 0px;
+    }
+
+    & .stats-points {
+        border-right: 10px solid $highlighter-neutral;
+    }
+
+    & tr:nth-child(odd) td .stats-points {
+        border-right: 10px solid darken($highlighter-neutral, 10%);
+    }
+
+    & .stats-points.stats-head {
+        border-right: 10px solid $highlighter-positive!important;
+    }
+
+    & .stats-head {
+        font-weight: bold;
+    }
+
+    & .stats-total {
+        background-color: $highlighter-positive;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: 15px;
+        color: #fff;
+        text-shadow: $main-shadow;
+        margin-bottom: 4px;
+        border-bottom: $dash;
+    }
+
+}
 
 
 /* list group headings */
@@ -1241,7 +1332,7 @@ body {
     }
 
     & .title-marker {
-        background-color: darken($highlighter-app, 15%);
+        background-color: #highlighter-app;
         min-height: 110px;
         width: 10px;
         position: absolute;
