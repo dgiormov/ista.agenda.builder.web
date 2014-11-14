@@ -9,5 +9,5 @@
  */
 angular.module('istaAngularApp')
   .service('ranking', function ranking($resource) {
-    return $resource('/rest/ranking');
+    return $resource('/rest/ranking/:id');
   });

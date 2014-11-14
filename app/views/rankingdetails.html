@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<back-button></back-button>
+
+		<div class="row session-overall">
+
+			<ol>
+				<li>
+					<i class="fa fa-user"></i>
+					<span class="speaker-name">{{player.name}}</span>
+				</li>
+			</ol>
+		</div>
+		<div class="row">
+		<table class="table table-condensed">
+			<tr><td>Type</td><td>Points</td></tr>
+		 	<tr ng-repeat="pointsDetails in player.pointsDetails">
+		 		<td>{{pointsDetails.name}}</td> <td>{{pointsDetails.factor}} x {{pointsDetails.points}}</td>
+		 	</tr>
+			<tr><b>Total: {{player.total}}</b></tr>
+		</table>
+	</div>
+	</div>
+</div>

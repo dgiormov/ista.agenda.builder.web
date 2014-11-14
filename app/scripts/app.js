@@ -36,8 +36,8 @@ angular
         controller: 'RankingCtrl'
       })
       .when('/ranking/:id', {
-        templateUrl: 'views/ratingdetails.html',
-        controller: 'RatingDetailsCtrl'
+        templateUrl: 'views/rankingdetails.html',
+        controller: 'RankingDetailsCtrl'
       })
 	  .when('/achievements', {
         templateUrl: 'views/achievements.html',
