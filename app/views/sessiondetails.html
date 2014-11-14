@@ -1,9 +1,15 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 
+		<div class="row header-title" ng-class="getTrackClass(session)">
+
+			<back-button></back-button>
+			<h4>Session Info</h4>
+
+		</div>
+
 
 		<div class="row session-name" ng-click="expandColapse()">
-			<back-button></back-button>
 			<h4>{{session.name}}</h4>
 
 		    <div ng-class="isAdded(true)" class="add-session" ng-click="addSession(session)">
@@ -14,6 +20,8 @@
 				<div class="session-expander"><i class="fa fa-angle-down"></i></div>
 				<p>{{session.description}}</p>
 			</div>
+
+			<div class="title-marker"></div>
 
 		</div>
 
@@ -32,6 +40,8 @@
 
 				</li>
 			</ol>
+
+			<div class="title-marker"></div>
 		</div>
 
 

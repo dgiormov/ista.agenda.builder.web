@@ -462,7 +462,7 @@ body {
             background-color: $highlighter-neutral;
         }
 
-        & .badge {
+        & .badge { 
             margin-right: 10px;
         }
 
@@ -1001,9 +1001,8 @@ body {
 .session-name {
 
     padding: 10px 10px 20px 10px;
-    margin-top: -23px;
-    background-color: $highlighter-dark;
-    border-bottom: $dash;
+    background-color: #fff;
+    position: relative;
 
     & h4 {
         width: 75%;
@@ -1012,8 +1011,7 @@ body {
         font-weight: bold;
         font-size: 1.5em;
         text-transform: capitalize;
-        color: #fff;
-        text-shadow: $main-shadow;
+        color: $body-dark;
     }
 
     .add-session {
@@ -1031,15 +1029,15 @@ body {
         }
 
         &.not-added {
-            background-color: rgba(0,0,0,0.60);
+            background-color: $highlighter-neutral;
         }
 
         &.session-added {
-            background-color: #fff;
+            background-color: $highlighter-positive;
         }
 
         & .fa {
-            color: $highlighter-dark;
+            color: #fff;
             font-size: 1.5em;
             line-height: 35px;
         }
@@ -1053,14 +1051,13 @@ body {
         &.description-collapsed {
 
             & p {
-                color: #fff;
+                color: $body-dark;
                 height: 1px;
                 margin: 0;
                 overflow: hidden;
                 float: left;
                 word-break: break-word;
                 font-size: 1.25em;
-                text-shadow: $main-shadow;
             }
 
             & .session-expander:after {
@@ -1071,15 +1068,14 @@ body {
         &.description-expanded {
 
             & p {
-                color: #fff;
+                color: $body-dark;
                 height: auto;
                 margin: 0;
-                padding: 10px 0px;
+                padding: 10px 10px 10px 0px;
                 word-break: break-word;
                 float: left;
                 word-break: break-word;
                 font-size: 1.25em;
-                text-shadow: $main-shadow;
             }
 
             & .session-expander:after {
@@ -1100,7 +1096,7 @@ body {
             font-weight: bold;
             position: absolute;
             bottom: -10px;
-            right: 5px;
+            right: 10px;
 
             & .fa {
                 margin-right: 5px;
@@ -1108,15 +1104,38 @@ body {
             }
         }
     }
+
+
+    & .title-marker {
+        background-color: $highlighter-app;
+        min-height: 110px;
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: -2px;
+        border-bottom: $dash;
+    }
 }
 
 .session-overall {
-    background-color: darken($highlighter-dark, 5%);
+    background-color: lighten($highlighter-app, 10%);
     color: #fff;
     font-size: 1.25em;
+    padding: 20px 10px 10px 10px;
+    position: relative;
     text-shadow: $main-shadow;
-    padding: 10px;
-    border-bottom: $dash;
+
+    &:before {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-color: lighten($highlighter-app, 10%);
+        top: -7px;
+        left: 35px;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
 
     & ol:first-child {
         margin: 0;
@@ -1146,7 +1165,7 @@ body {
 
         & .fa-user {
             text-shadow: none;
-            margin-right: 10px;
+            margin-right: 15px;
             color: rgba(0,0,0,0.35);
             float: left;
             font-size: 4em;
@@ -1187,7 +1206,7 @@ body {
             & p {
                 height: auto;
                 margin: 0;
-                padding: 10px 0px;
+                padding: 10px 10px 10px 0px;
                 word-break: break-word;
                 float: left;
                 font-weight: normal;
@@ -1209,7 +1228,7 @@ body {
             font-weight: bold;
             position: absolute;
             bottom: -15px;
-            right: 5px;
+            right: 10px;
             color: rgba(0, 0, 0, 0.6);
             text-shadow: none;
 
@@ -1220,6 +1239,58 @@ body {
         }
 
     }
+
+    & .title-marker {
+        background-color: darken($highlighter-app, 15%);
+        min-height: 110px;
+        width: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: -2px;
+        border-bottom: $dash;
+    }
+}
+
+
+.header-title {
+
+    border-bottom: $dash;
+    background-color: $highlighter-app;
+    margin-top: -21px;
+    line-height: 50px;
+    padding: 0 15px;
+    position: relative;
+
+    &.track-a {
+        background-color: $track-1-color;
+    }
+
+    &.track-b {
+        background-color: $track-2-color;
+    }
+
+    &.track-c {
+        background-color: $track-3-color;
+    }
+
+    & h4 {
+        float: right;
+        margin-top: 12px;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        color: #fff;
+        text-shadow: $main-shadow;
+        display: inline-block;
+    }
+
+    & back-button {
+        display: inline-block;
+        color: #fff;
+        text-shadow: $main-shadow;
+    }
+
 }
 
 
