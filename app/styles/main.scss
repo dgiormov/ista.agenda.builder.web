@@ -16,9 +16,11 @@ $track-3-color: #43dd90;
 $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
 $dash: 2px solid rgba(0,0,0,0.12);
 
+$main-fonts: 'PT Sans', 'Arial', 'Helvetica' sans-serif;
+
 body {
     background-color: $main-background;
-    font-family: 'PT Sans', 'Arial', 'Helvetica' sans-serif;
+    font-family: $main-fonts;
     padding-top: 60px;
 }
 
@@ -521,7 +523,7 @@ body {
         .ranking-marker {
             @extend .track-marker;
             min-height: 80px;
-            background-color: $highlighter-neutral
+            background-color: $highlighter-neutral;
         }
 
         &.list-group-me {
@@ -553,6 +555,41 @@ body {
 
         & > a.list-group-item-holder {
           width: 100%;
+        }
+
+        &.rank3 .fa:after,
+        &.rank2 .fa:after,
+        &.rank1 .fa:after {
+            margin-left: 10px;
+            font-family: $main-fonts;
+            font-size: 0.925em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &.rank3 .fa:after {
+            content: 'Platinum User';
+        }
+
+        &.rank2 .fa:after {
+            content: 'Gold User';
+        }
+
+        &.rank1 .fa:after {
+            content: 'Silver User';
+        }
+            
+
+        &.rank3 .fa:before {
+            content: '\f005 \f005 \f005';
+        }
+
+        &.rank2 .fa:before {
+            content: '\f005 \f005';
+        }
+
+        &.rank1 .fa:before {
+            content: '\f005';
         }
     }
 }
@@ -1663,13 +1700,9 @@ body {
          & img {
             max-width: 13%!important; /* due to broken inception rule in regular css */
             margin-right: 25px!important; /* due to broken inception rule in regular css */
-
-
          }
     }
    
-
-
 
 }
 
