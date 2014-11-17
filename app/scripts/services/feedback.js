@@ -9,5 +9,5 @@
  */
 angular.module('istaAngularApp')
   .service('feedback', function($resource) {
-  	return $resource('rest/feedback');
+  	return $resource('rest/me/feedback');
   });

@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="panel-body">
-		<div class="row">
+		<div class="row" ng-show="canPost.available">
 			<div class="input-group input-group-lg">
 				<h4>What did you liked about the conference?</h4>
 				<textarea class="form-control" rows="3" ng-model="q1"></textarea>
@@ -12,8 +12,14 @@
 				<textarea class="form-control" rows="3" ng-model="q2"></textarea>
 			</div>
 		</div>
-		<div class="row">
-			<button class="btn btn-default" type="button" ng-click="enterCode()">Submit feedback</button>
+		<div class="row" ng-show="canPost.hasProvided">
+			<h2>Thank you for providing feedback.</h2>
+		</div>
+		<div class="row" ng-show="canPost.waitForIt">
+			<h2>You can provide feedback a bit later.</h2>
+		</div>
+		<div class="row" ng-show="canPost.available">
+			<button class="btn btn-default" type="button" ng-click="postFeedback()">Submit feedback</button>
 		</div>
 	</div>
 </div>
