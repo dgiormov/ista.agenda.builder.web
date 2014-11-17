@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/ranking.html',
         controller: 'RankingCtrl'
       })
+      .when('/feedback', {
+        templateUrl: 'views/feedback.html',
+        controller: 'FeedbackCtrl'
+      })
       .when('/ranking/:id', {
         templateUrl: 'views/rankingdetails.html',
         controller: 'RankingDetailsCtrl'
