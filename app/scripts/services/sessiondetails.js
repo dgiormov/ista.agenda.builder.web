@@ -19,5 +19,5 @@ angular.module('istaAngularApp')
   })
   
   .service('shareService', function($resource) {
-  	return $resource('rest/share');
+  	return $resource('rest/me/share');
   });

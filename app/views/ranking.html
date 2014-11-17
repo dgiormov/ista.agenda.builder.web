@@ -23,10 +23,12 @@
 		<ul class="list-group list-group-me-wrap">
 			<li class="list-group-item list-group-ranking list-group-me {{rank.rank}}">
 				<div class="list-group-item-holder">
-					<span class="badge">{{allRanking.me.points}}</span>
-					<h4 class="list-group-item-heading"><span>#{{allRanking.me.position}}</span> {{allRanking.me.name}}</h4>
-					<i class="fa fa-user"></i>
-					<div class="ranking-marker"></div>
+					<a ng-href="#/ranking/{{allRanking.me.id}}" class="list-group-item-holder">
+						<span class="badge">{{allRanking.me.points}}</span>
+						<h4 class="list-group-item-heading"><span>#{{allRanking.me.position}}</span> {{allRanking.me.name}}</h4>
+						<i class="fa fa-user"></i>
+						<div class="ranking-marker"></div>
+					</a>
 				</div>
 			</li>
 		</ul>
@@ -57,7 +59,7 @@
 
 	<div class="panel-body">
 		<ol class="list-group" pull-to-refresh="onReload()">
-			<li class="list-group-item list-group-ranking {{rank.rank}}" ng-repeat="rank in allRanking.ranking | filter:search" ng-class="{leader: $index < 1}" >
+			<li class="list-group-item list-group-ranking {{rank.rank}}" ng-repeat="rank in allRanking.ranking | filter:search" ng-class="{leader: rank.position === 1}" >
 				<a ng-href="#/ranking/{{rank.id}}" class="list-group-item-holder">
 					<span class="badge">{{rank.points}}</span>
 					<h4 class="list-group-item-heading"><span>#{{rank.position}}</span> {{rank.name}}</h4>

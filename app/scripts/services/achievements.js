@@ -9,5 +9,5 @@
  */
 angular.module('istaAngularApp')
   .service('achievements', function codes($resource) {
-  	return $resource('rest/achievements');
+  	return $resource('rest/me/achievements');
   });
