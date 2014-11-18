@@ -8,6 +8,9 @@
  * Service in the istaAngularApp.
  */
 angular.module('istaAngularApp')
-  .service('codes', function codes($resource) {
+  .service('codes', function($resource) {
   	return $resource('rest/codes');
+  })
+  .service('challenge', function ($resource) {
+  	return $resource('rest/me/challenge');
   });
