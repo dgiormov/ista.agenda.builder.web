@@ -26,6 +26,12 @@ body {
 
 /* NAVBAR */
 
+.navbar-fixed-top .navbar-collapse {
+    height: auto;
+    max-height: none;
+}
+
+
 .navbar-default {
 
     border: none;
