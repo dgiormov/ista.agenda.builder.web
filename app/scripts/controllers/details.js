@@ -144,7 +144,7 @@ angular.module('istaAngularApp')
 		}
 		
 		$scope.hasPicture = function(speaker){
-			if(speaker.picture === 'undefined' || speaker.picture.length < 3){
+			if(speaker.picture === 'undefined' || speaker.picture === ""){
 				return false;
 			}
 			return true;

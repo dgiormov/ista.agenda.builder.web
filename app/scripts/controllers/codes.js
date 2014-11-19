@@ -26,10 +26,14 @@ angular.module('istaAngularApp')
 	  });
 	  
 	  $scope.goldAndUnlocked = function(){
-		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked;
+		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked && !$scope.challenge.code;
 	  }
 	  $scope.goldAndLocked = function(){
 		  return $scope.challenge.rank > 1 && !$scope.challenge.unlocked;
 	  }
+	  $scope.goldAndFinished = function(){
+		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked && $scope.challenge.code;
+	  }
+	  
 	  
   });
