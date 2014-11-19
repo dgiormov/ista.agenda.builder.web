@@ -539,6 +539,10 @@ body {
             & .ranking-marker {
                 background-color: $highlighter-positive;
             }
+
+            & a {
+                width: 100%;
+            }
         }
 
         & .fa {
