@@ -9,7 +9,7 @@
  */
 angular.module('istaAngularApp')
   .controller('CodesCtrl', function ($scope, challenge) {
-	  $scope.tittle = "Challenges are available for Gold+ users only. Check out Achievemnts tab.";
+	  $scope.tittle = "Unlock the challenge by reaching Gold User status !";
 	  $scope.description = "";
   	  $scope.counter = 0;
 	  $scope.challenge = challenge.get(function(){
