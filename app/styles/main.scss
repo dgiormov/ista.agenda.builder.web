@@ -1549,6 +1549,18 @@ body {
 }
 
 
+.achievements-list {
+
+    text-align: center;
+    background-color: #fff;
+    border-bottom: $dash;
+    margin-top: 20px;
+
+    & .fa {
+        font-size: 5em;
+        margin: 20px 15px;
+    }
+}
 
 
 .menu-title {
@@ -1601,6 +1613,8 @@ body {
 .content {
     padding: 20px;
 }
+
+
 
 @media(min-width:768px) {
 
