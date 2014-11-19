@@ -31,7 +31,7 @@
 			<ol ng-repeat="speaker in session.speakers">
 				<li ng-click="expandColapseBio($index)">
 					<i class="fa fa-user" ng-hide="hasPicture(speaker)"></i>
-					<img src="{{speaker.picture}}" alt="" ng-show="hasPicture(speaker)">
+					<img src="{{speaker.picture}}" alt="" ng-show="hasPicture(speaker)" class="speaker-picture">
 					<span class="speaker-name">{{speaker.name}}</span>
 					<div class="speaker-info">{{speaker.job_title}},<br>{{speaker.company}}</div>
 					<div ng-class="getBioClass($index)" class="bio-description">

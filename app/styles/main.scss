@@ -1485,6 +1485,12 @@ body {
     border-bottom: $dash;
 }
 
+.speaker-picture {
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
 .session-rating,
 .session-speaker {
     margin-top: 10px;
