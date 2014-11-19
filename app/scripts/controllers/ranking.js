@@ -14,7 +14,10 @@ angular.module('istaAngularApp')
 	$scope.code="";
 	
 	$scope.enterCode = function() {
-	      codes.save({}, {code: $scope.code}, function(){
+	      codes.save({}, {code: $scope.code}, function(resp){
+			  $('#mTitle').html('Congratulations');
+			  $('#mDesc').html("You have won: "+ resp.points + " points.");
+	      	  $('#messageModal').modal('show');
 	      });
 	}
   });

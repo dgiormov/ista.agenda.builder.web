@@ -6,10 +6,14 @@
 
 	<div class="panel-body">
 		<div class="row">
-			<div class="input-group input-group-lg" ng-show="challenge.rank > 1">
+			<div class="input-group input-group-lg" ng-show="goldAndUnlocked()">
 				{{description}}
 				<h1>{{counter}}</h1>
 			</div>
+			<div class="input-group input-group-lg" ng-show="goldAndLocked()">
+				<p>To unlock the challenge go to the Charirty booth, find the public code and enter it <a href="#/ranking">here</a></p>
+			</div>
+
 		</div>
 	</div>
 </div>

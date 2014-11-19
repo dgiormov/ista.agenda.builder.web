@@ -10,6 +10,46 @@
 angular.module('istaAngularApp')
   .controller('AchievementsCtrl', function ($scope, achievements) {
 	  $scope.myAchievements = achievements.get();
+	  
+	  
+	  $scope.help = function(achievement){
+		  var helpText = "";
+		  switch(achievement) {
+		      case "login":
+		          helpText = "Login";
+		          break;
+		      case "prepare":
+		          helpText = "Prepare for the conference by selecting, which sessions you will attend.";
+		          break;
+		      case "share":
+		          helpText = "Share your experience in social networks. (Share buttons are in session details)";
+		          break;
+		      case "rate":
+		          helpText = "Rate session or speaker.";
+		          break;
+		      case "comment":
+		          helpText = "Place a comment in some session slot.";
+		          break;
+		      case "top100":
+		          helpText = "Manage to get in Top 100 in our leaderboard.";
+		          break;
+		      case "liked5":
+		          helpText = "Recieve 5+ likes on comment you have posted.";
+		          break;
+		      case "fillupsurvey":
+		          helpText = "Give us some feedback for the conference";
+		          break;
+		      case "tshirt":
+		          helpText = "Help our charity cause, buy a T-Shirt and enter the code in the application.";
+		          break;
+				
+			  }
+			  $('#mTitle').html('To win this achievement you have to:');
+			  $('#mDesc').html(helpText);
+	      	  $('#messageModal').modal('show');
+			 
+	  }
+	  
 	  $scope.getCss = function(level, achievement, altAch){
 		  if(level == 1){
 			  if($scope.myAchievements.rank1 === 'undefined'){

@@ -14,10 +14,22 @@ angular.module('istaAngularApp')
   	  $scope.counter = 0;
 	  $scope.challenge = challenge.get(function(){
 		  if($scope.challenge.rank > 1){
-		  	$scope.tittle = "Challenge unlocked"
-		 	$scope.description = "Text description of the challenge";
-	  	 	$scope.counter = $scope.challenge.counter;
+			  if($scope.challenge.unlocked){
+				  $scope.tittle = "Challenge unlocked";		  	
+	  	  	 	  $scope.counter = $scope.challenge.counter;
+			  } else {
+				  $scope.tittle = "You can unlock the challenge now.";
+  	  	 	  $scope.counter = "";
+		  		}
 		  }
 	  	
 	  });
+	  
+	  $scope.goldAndUnlocked = function(){
+		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked;
+	  }
+	  $scope.goldAndLocked = function(){
+		  return $scope.challenge.rank > 1 && !$scope.challenge.unlocked;
+	  }
+	  
   });
