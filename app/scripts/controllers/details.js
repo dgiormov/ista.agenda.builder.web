@@ -143,7 +143,12 @@ angular.module('istaAngularApp')
 			return $scope.bioStatus[indexBio];
 		}
 		
-		
+		$scope.hasPicture = function(speaker){
+			if(speaker.picture === 'undefined' || speaker.picture.length < 3){
+				return false;
+			}
+			return true;
+		}
 		
 		
 		
