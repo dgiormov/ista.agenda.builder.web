@@ -10,7 +10,7 @@ angular.module('istaAngularApp')
   .directive('backButton', function() {
     return {
       restrict: 'E',
-      template: '<div class="add-session session-added"><i class="fa fa-chevron-left"></i></div>',
+      template: '<div class="add-session session-added"><i class="fa fa-chevron-left"></i>Back</div>',
       link: function(scope, element) {
         element.bind('click', function() {
           history.back();

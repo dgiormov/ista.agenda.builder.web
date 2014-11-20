@@ -78,7 +78,7 @@ angular
    * and broadcasts 'event:auth-forbidden'.
    */
   .config(['$httpProvider', function($httpProvider) {
-    $httpProvider.interceptors.push(['$rootScope', '$q', function($rootScope, $q, httpBuffer) {
+    $httpProvider.interceptors.push(['$rootScope', '$q', function($rootScope, $q) {
       return {
         responseError: function(rejection) {
           switch (rejection.status) {
@@ -108,7 +108,7 @@ angular
 
 // quick and dirty fix for colapsable not closing
 jQuery(document).ready(function() {
-  jQuery("#navbar-ex1-collapse").click(function() {
-    jQuery("#navbar-ex1-collapse.in").collapse('hide');
+  jQuery('#navbar-ex1-collapse').click(function() {
+    jQuery('#navbar-ex1-collapse.in').collapse('hide');
   });
 });
