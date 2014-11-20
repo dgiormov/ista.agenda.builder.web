@@ -10,10 +10,17 @@
 angular.module('istaAngularApp')
 	.controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, SpeakerRatingService, PersonService, shareService) {
 
+		$scope.host = "Speaker";
 		$scope.session = sessionDetails.get({
 			id: $routeParams.id
 		}, function(){
 			var speakers = $scope.session.speakers;
+			if(speakers.length > 1){
+				$scope.host = "Speakers";
+			} else if(speakers.length == 1 && speakers[0].name === 'Organizers'){
+				$scope.host = "Staff";
+			}
+
 			for(var i=0; i<speakers.length; i++){
 				$scope.bioStatus[i] = "description-collapsed";
 			}
