@@ -6,18 +6,24 @@
 
 	<div class="panel-body">
 		<div class="row">
+			<div class="input-group input-group-lg" ng-show="baby()">
+				<h4>You have to reach gold status to enable the challenge. Find out how <a href="#/achievements">here!</a></h4>
+				<img src="{{imgurl}}"/>
+			</div>
 			<div class="input-group input-group-lg" ng-show="goldAndUnlocked()">
-				<p>Help to reach 200 t-shirts to enable additional donation ! Enter t-shirt code here<a href="#/ranking">here!</a></p>
-				<h1>{{counter}} T-Shirts codes entered</h1>
+				<h4>Help us to reach 200 t-shirts to enable additional donation ! Enter t-shirt code <a href="#/ranking">here!</a></h4>
+				<img src="{{imgurl}}"/>
+				<h4>Players completed the challenge: <b>{{counter}}</b></h4>
 			</div>
 			<div class="input-group input-group-lg" ng-show="goldAndFinished()">
-				<p>Thank you for your support.</p>
-				<h1>{{counter}} T-Shirts codes entered</h1>
+				<h4>Thank you for your support.</h4>
+				<img src="{{imgurl}}"/>
+				<h4>Players completed the challenge: <b>{{counter}}</b></h4>
 			</div>
 			<div class="input-group input-group-lg" ng-show="goldAndLocked()">
-				<p>Go to the charity booth and find the code ! Enter the code <a href="#/ranking">here!</a></p>
+				<img src="{{imgurl}}"/>
+				<h4>Go to the charity booth and find the code ! Enter the code <a href="#/ranking"> here!</a></h4>
 			</div>
-
 		</div>
 	</div>
 </div>
