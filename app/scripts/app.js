@@ -95,7 +95,7 @@ angular
 			case 409:
 			case 412:
 			case 428:
-				if(rejection.data.message !=='undefined'){}
+				if(typeof rejection.data.message !='undefined'){
 				  $('#mTitle').html('Error');
 				  $('#mDesc').html(rejection.data.message);
 		      	  $('#messageModal').modal('show');
