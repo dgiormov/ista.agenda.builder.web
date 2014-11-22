@@ -1503,7 +1503,8 @@ body {
 }
 
 .session-rating,
-.session-speaker {
+.session-speaker,
+.session-share {
     margin-top: 10px;
     padding: 10px;
     background-color: #fff;
@@ -1553,9 +1554,25 @@ body {
 
         }
     }
+}
 
-    & .rating-marker {
+.session-share {
 
+    & .rate-title {
+        display: block;
+    }
+
+    & .fa {
+        font-size: 3em;
+        margin: 10px 20px;
+
+        &.fa-twitter {
+            color: #55acee;
+        }
+
+        &.fa-linkedin {
+            color: #000000;
+        }
     }
 }
 
