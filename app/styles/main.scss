@@ -31,7 +31,6 @@ body {
     max-height: none;
 }
 
-
 .navbar-default {
 
     border: none;
@@ -1247,7 +1246,7 @@ body {
 
 
     & .title-marker {
-        background-color: $highlighter-app;
+        background-color: rgba(0,0,0,0.1);
         min-height: 110px;
         width: 10px;
         position: absolute;
@@ -1381,7 +1380,7 @@ body {
     }
 
     & .title-marker {
-        background-color: $highlighter-app;
+        background-color: rgba(0,0,0,0.1);
         min-height: 110px;
         width: 10px;
         position: absolute;
@@ -1399,7 +1398,7 @@ body {
     background-color: $highlighter-app;
     margin-top: -21px;
     line-height: 50px;
-    padding: 0 15px;
+    padding: 5px 15px 0px 15px;
     position: relative;
 
     &.track-a {
@@ -1416,9 +1415,9 @@ body {
 
     & h4 {
         float: right;
-        margin-top: 12px;
+        margin-top: 15px;
         font-weight: bold;
-        font-size: 1.5em;
+        font-size: 1.25em;
         text-transform: capitalize;
         color: #fff;
         text-shadow: $main-shadow;
@@ -1429,6 +1428,14 @@ body {
         display: inline-block;
         color: #fff;
         text-shadow: $main-shadow;
+        font-weight: bold;
+        font-size: 1.25em;
+        text-shadow: $main-shadow;
+
+        & .fa {
+            font-size: 0.75em;
+            margin-right: 5px;
+        }
     }
 
 }
