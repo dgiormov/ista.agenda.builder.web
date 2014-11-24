@@ -648,26 +648,31 @@ body {
         border: none!important;
     }
 
-    td {
+    td, th {
         padding: 2px 0px !important;
     }
 
-    & td div {
+    & td div,
+    & th div {
         border-bottom: none;
         background-color: #fff;
         border-bottom: $dash;
     }
 
-    & td .stats-name {
+    & td .stats-name,
+    & th .stats-name {
         padding: 15px 0px 15px 15px;
     }
 
-    & td .stats-points {
+    & td .stats-points,
+    & th .stats-points {
         padding: 15px 15px 15px 0px;
+        font-weight: bold;
     }
 
     & .stats-points {
         border-right: 10px solid $highlighter-neutral;
+        text-align: right;
     }
 
     & tr:nth-child(odd) td .stats-points {
@@ -691,6 +696,17 @@ body {
         text-shadow: $main-shadow;
         margin-bottom: 4px;
         border-bottom: $dash;
+    }
+
+    &.session-stats {
+        td div {
+            min-height: 125px;
+            font-size: 1em;
+        }
+
+        th div {
+            min-height: 75px;
+        }
     }
 
 }
