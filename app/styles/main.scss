@@ -10,8 +10,8 @@ $highlighter-neutral: #d2d2d2;
 $highlighter-dark: #3482a9;
 
 $track-1-color: #30cbef;
-$track-2-color: #f44a6e;
-$track-3-color: #43dd90;
+$track-2-color: #cb4662;
+$track-3-color: #63c089;
 
 $main-shadow: 1px 2px 0px rgba(0,0,0,0.1);
 $dash: 2px solid rgba(0,0,0,0.12);
@@ -143,7 +143,6 @@ body {
         & li {
             background-color: #fff;
             border-bottom: $dash;
-            margin-bottom: 3px;
             transition: 0.2s;
 
             &::first-child {
@@ -700,7 +699,7 @@ body {
 
     &.session-stats {
         td div {
-            min-height: 125px;
+            min-height: 120px;
             font-size: 1em;
         }
 
