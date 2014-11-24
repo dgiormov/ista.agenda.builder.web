@@ -47,6 +47,10 @@ angular
         templateUrl: 'views/achievements.html',
         controller: 'AchievementsCtrl'
       })
+	  .when('/top', {
+        templateUrl: 'views/topsessions.html',
+        controller: 'TopSessionCtrl'
+      })
 	  .when('/partners', {
         templateUrl: 'views/partners.html'
       })	  

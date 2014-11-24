@@ -8,5 +8,7 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-  .controller('FeedbackCtrl', function($scope, feedback) {
+  .controller('TopSessionCtrl', function($scope, topsession, topspeaker) {
+	  $scope.speakers = topspeaker.query({});
+	  $scope.sessions = topsession.query({});
   });
