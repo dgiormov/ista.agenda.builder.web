@@ -553,7 +553,6 @@ body {
             & .fa {
 
                 color: $highlighter-positive;
-                font-size: 2.25em;
 
                 &:before {
                     content: '\f091';
@@ -577,10 +576,12 @@ body {
 
         &.rank3 .fa:after {
             content: 'Platinum User';
+            color: #454d55;
         }
 
         &.rank2 .fa:after {
             content: 'Gold User';
+            color: #F89406;
         }
 
         &.rank1 .fa:after {
@@ -589,15 +590,17 @@ body {
 
 
         &.rank3 .fa:before {
-            content: '\f005 \f005 \f005';
+            content: '\f005';
+            color: #454d55;
         }
 
         &.rank2 .fa:before {
-            content: '\f005 \f005';
+            content: '\f123';
+            color: #F89406;
         }
 
         &.rank1 .fa:before {
-            content: '\f005';
+            content: '\f006';
         }
     }
 }
