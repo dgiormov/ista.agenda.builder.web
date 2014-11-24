@@ -9,7 +9,7 @@ $highlighter-positive: #8cc542;
 $highlighter-neutral: #d2d2d2;
 $highlighter-dark: #3482a9;
 
-$track-1-color: #30cbef;
+$track-1-color: #3cc6eb;
 $track-2-color: #cb4662;
 $track-3-color: #63c089;
 
@@ -1595,13 +1595,35 @@ body {
 .achievements-list {
 
     text-align: center;
-    background-color: #fff;
-    border-bottom: $dash;
-    margin-top: 20px;
 
     & .fa {
         font-size: 5em;
         margin: 20px 15px;
+    }
+
+    & .achievements-rank {
+        background-color: #fff;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-bottom: $dash;
+    }
+
+    & .achievements-title {
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    & .achievements-description {
+
+        background-color: darken($highlighter-app, 5%);
+        border-bottom: $dash;
+
+        & h3 {
+            color: #fff;
+            font-size: 1.25em;
+            font-weight: bold;
+            text-shadow: $main-shadow;
+        }
     }
 }
 
