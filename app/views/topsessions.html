@@ -19,13 +19,28 @@
 		 	<tr ng-repeat="session in sessions">
 		 		<td><div class="stats-name">{{session.pos}}</div></td> 
 		 		<td><div class="stats-name">{{session.name}}</div></td> 
-		 		<td><div class="stats-points">{{session.rating}}</div></td>
+		 		<td><div class="stats-points">
+					({{session.rating}})
+					<i class="fa" ng-class="getStar(1, session.rating)"></i>
+					<i class="fa" ng-class="getStar(2, session.rating)"></i>
+					<i class="fa" ng-class="getStar(3, session.rating)"></i>
+					<i class="fa" ng-class="getStar(4, session.rating)"></i>
+					<i class="fa" ng-class="getStar(5, session.rating)"></i>
+				</div></td>
 		 	</tr>
 			<tr><div class="stats-total">Speakers</div></tr>
 		 	<tr ng-repeat="speaker in speakers">
 		 		<td><div class="stats-name">{{speaker.pos}}</div></td> 
 		 		<td><div class="stats-name">{{speaker.name}}</div></td> 
-		 		<td><div class="stats-points">{{speaker.rating}}</div></td>
+		 		<td><div class="stats-points">
+					({{speaker.rating}})
+					<i class="fa" ng-class="getStar(1, speaker.rating)"></i>
+					<i class="fa" ng-class="getStar(2, speaker.rating)"></i>
+					<i class="fa" ng-class="getStar(3, speaker.rating)"></i>
+					<i class="fa" ng-class="getStar(4, speaker.rating)"></i>
+					<i class="fa" ng-class="getStar(5, speaker.rating)"></i>
+					</div>
+				</td>
 		 	</tr>
 		</table>
 	</div>
