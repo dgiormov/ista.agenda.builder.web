@@ -47,6 +47,9 @@ angular
         templateUrl: 'views/achievements.html',
         controller: 'AchievementsCtrl'
       })
+	  .when('/partners', {
+        templateUrl: 'views/partners.html'
+      })	  
       .otherwise({
         redirectTo: '/days/27'
       });
