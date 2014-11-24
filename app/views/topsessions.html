@@ -2,20 +2,17 @@
 	<div class="panel-body">
 
 		<div class="row header-title" ng-class="getTrackClass(session)">
-
-			<back-button/>
 			<h4>Top Session / Speakers</h4>
-
 		</div>
 
 		<div class="row user-stats session-stats">
 		<table class="table table-condensed">
+			<tr><th colspan="3"><div class="stats-total">Sessions</div></th></tr>
 			<tr>
 				<th><div class="stats-name stats-head">Position</div></th>
 				<th><div class="stats-name stats-head">Session name</div></th>
 				<th><div class="stats-points stats-head"> Average rating</div></th>
 			</tr>
-			<tr><div class="stats-total">Sessions</div></tr>
 		 	<tr ng-repeat="session in sessions">
 		 		<td><div class="stats-name">{{session.pos}}</div></td> 
 		 		<td><div class="stats-name">{{session.name}}</div></td> 
@@ -28,7 +25,12 @@
 					<i class="fa" ng-class="getStar(5, session.rating)"></i>
 				</div></td>
 		 	</tr>
-			<tr><div class="stats-total">Speakers</div></tr>
+			<tr><th colspan="3"><div class="stats-total">Speakers</div></th></tr>
+			<tr>
+				<th><div class="stats-name stats-head">Position</div></th>
+				<th><div class="stats-name stats-head">Session name</div></th>
+				<th><div class="stats-points stats-head"> Average rating</div></th>
+			</tr>
 		 	<tr ng-repeat="speaker in speakers">
 		 		<td><div class="stats-name">{{speaker.pos}}</div></td> 
 		 		<td><div class="stats-name">{{speaker.name}}</div></td> 
