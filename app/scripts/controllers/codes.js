@@ -12,6 +12,7 @@ angular.module('istaAngularApp')
 	  $scope.tittle = "Unlock the challenge by reaching Gold User status !";
 	  $scope.description = "";
   	  $scope.counter = 0;
+	  $scope.counterInPercents = 0;
 	  $scope.imgurl = "images/challenge/baby.png";
 	  $scope.challenge = challenge.get(function(){
 		  if($scope.challenge.rank > 1){
@@ -19,11 +20,19 @@ angular.module('istaAngularApp')
 				  if(!$scope.challenge.code){
 					  $scope.tittle = "Challenge started";
 					  $scope.imgurl = "images/challenge/charity.jpg";
-		  	  	 	  $scope.counter = $scope.challenge.counter;				  	
+		  	  	 	  $scope.counter = $scope.challenge.counter;
+				  	  $scope.counterInPercents = $scope.challenge.counter / 2;
+					  if($scope.counterInPercents > 100){
+						  $scope.counterInPercents = 100;
+					  }
 				  } else {
 					  $scope.tittle = "Challenge complete";
 					  $scope.imgurl = "images/challenge/charity.jpg";
-		  	  	 	  $scope.counter = $scope.challenge.counter;				  	
+		  	  	 	  $scope.counter = $scope.challenge.counter;
+				  	  $scope.counterInPercents = $scope.challenge.counter / 2;
+					  if($scope.counterInPercents > 100){
+						  $scope.counterInPercents = 100;
+					  }
 				  }
 				  if($scope.challenge.points > 200){
 					  $scope.imgurl = "images/challenge/charity.jpg";
@@ -32,6 +41,7 @@ angular.module('istaAngularApp')
 				  $scope.tittle = "You can unlock the challenge now.";
   			  	  $scope.imgurl = "images/challenge/treasure-map.png";
 				  $scope.counter = "";
+				  $scope.counterInPercents = "";
 		  		}
 		  }
 	  	
