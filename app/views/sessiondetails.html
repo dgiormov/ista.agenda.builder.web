@@ -87,9 +87,10 @@
 			</div>
 
 			<div class="col col-sm-12 col-md-6 session-share">
-				<div class="rate-title">Wht not share this?</div>
-				<i class="fa fa-twitter"></i>
-				<i class="fa fa-linkedin"></i>
+				<div class="rate-title">Wht not share?</div>
+				<a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?url={{articleUrl}}"  ng-click="share()"><i class="fa fa-twitter"></i></a>
+				<a class="twitter-share-button" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{bareArticleUrl}}&title={{session.name}}"  ng-click="share()"><i class="fa fa-linkedin"></i></a>
+<!--				<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{articleUrl}}"><i class="fa fa-facebook"></i></a>-->
 				<div class="rating-marker"></div>
 			</div>
 
@@ -129,18 +130,5 @@
 
 	</div>
 	
-	<div class="panel-footer comments-title">
-		<div>
-		<a class="twitter-share-button" href="https://twitter.com/share"  ng-click="share()">Tweet</a>
-		<script type="text/javascript">
-		window.twttr=(function(d,s,id){var 			t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https			://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return 			window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-		</script>
+	<div class="panel-footer comments-title">		
 	</div>
-	<div>
-	<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
-	<script type="in/share" data-counter="right"></script>
-</div>
-<div class="g-plus" data-action="share" ng-click="share()"></div>
-	</div>
-		
-</div>

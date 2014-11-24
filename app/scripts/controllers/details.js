@@ -8,9 +8,10 @@
  * Controller of the istaAngularApp
  */
 angular.module('istaAngularApp')
-  .controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, SpeakerRatingService, PersonService, shareService) {
-
+  .controller('DetailsCtrl', function($scope, $routeParams, sessionDetails, sessionComments, sessionCommentsLike, RatingService, SpeakerRatingService, PersonService, shareService, $location) {
     $scope.host = 'Speaker';
+	$scope.bareArticleUrl = $location.path();
+	$scope.articleUrl = encodeURI($location.absUrl());
     $scope.session = sessionDetails.get({
       id: $routeParams.id
     }, function() {
