@@ -26,7 +26,7 @@ angular.module('istaAngularApp')
 						  $scope.counterInPercents = 100;
 					  }
 				  } else {
-					  $scope.tittle = "Challenge complete";
+					  $scope.tittle = "Well done, you have completed the challenge";
 					  $scope.imgurl = "images/challenge/charity.jpg";
 		  	  	 	  $scope.counter = $scope.challenge.counter;
 				  	  $scope.counterInPercents = $scope.challenge.counter / 2;
@@ -34,8 +34,9 @@ angular.module('istaAngularApp')
 						  $scope.counterInPercents = 100;
 					  }
 				  }
-				  if($scope.challenge.points > 200){
-					  $scope.imgurl = "images/challenge/charity.jpg";
+				  if($scope.challenge.counter > 200){
+					  $scope.tittle = "Additional donation unlocked";
+					  $scope.imgurl = "images/challenge/ista3.jpg";
 				  }
 			  } else {
 				  $scope.tittle = "You can unlock the challenge now.";
@@ -54,9 +55,10 @@ angular.module('istaAngularApp')
 		  return $scope.challenge.rank > 1 && !$scope.challenge.unlocked;
 	  };
 	  $scope.goldAndFinished = function(){
-		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked && $scope.challenge.code;
+		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked && $scope.challenge.code && $scope.challenge.counter <200;
 	  };
-	  $scope.baby = function(){
-		  return $scope.challenge.rank < 2;
+
+	  $scope.finito = function(){
+		  return $scope.challenge.rank > 1 && $scope.challenge.unlocked && $scope.challenge.code && $scope.challenge.counter >=200;
 	  };
   });
