@@ -43,39 +43,35 @@ angular
         templateUrl: 'views/rankingdetails.html',
         controller: 'RankingDetailsCtrl'
       })
-	  .when('/achievements', {
+      .when('/achievements', {
         templateUrl: 'views/achievements.html',
         controller: 'AchievementsCtrl'
       })
-	  .when('/top', {
+      .when('/top', {
         templateUrl: 'views/topsessions.html',
         controller: 'TopSessionCtrl'
+      }).
+      when('/welcome', {
+        templateUrl: 'views/welcome.html',
+        controller: 'WelcomeModalCtrl'
       })
-	  .when('/partners', {
+      .when('/partners', {
         templateUrl: 'views/partners.html'
-      })	  
+      })
       .otherwise({
         redirectTo: '/days/27'
       });
+  })
+  .run(function($cookies, $location){
+    if (!$cookies.hideWellcome) {
+      $location.path('/welcome');
+    }
   }).controller('LoginCtrl', function($scope, UserService) {
     $scope.userDetails = UserService.get(function(data) {
       if (data.hasCookie && !data.isLogged) {
         window.location = 'authorize?provider=auto';
       }
     });
-  }).controller('wellcomeModalCtrl', function($scope, $cookies) {
-	  $scope.showLogin = false;
-    if (!$cookies.hideWellcome) {
-      $('#wellcomeModal').modal('show');
-    }
-    $scope.goToLogin = function() {
-       $scope.showLogin = true;
-       $cookies.hideWellcome = true;
-    };
-
-    $scope.hide = function() {
-      $cookies.hideWellcome = true;
-    };
   })
   /**
    * $http interceptor.
@@ -96,18 +92,18 @@ angular
             case 403:
               $('#loginModal').modal('show');
               break;
-		  	case 400:
-			case 405:
-			case 406:
-			case 409:
-			case 412:
-			case 428:
-				if(typeof rejection.data.message !='undefined'){
-				  $('#mTitle').html('Error');
-				  $('#mDesc').html(rejection.data.message);
-		      	  $('#messageModal').modal('show');
-			  }
-				  break;
+            case 400:
+            case 405:
+            case 406:
+            case 409:
+            case 412:
+            case 428:
+              if (typeof rejection.data.message !== 'undefined') {
+                $('#mTitle').html('Error');
+                $('#mDesc').html(rejection.data.message);
+                $('#messageModal').modal('show');
+              }
+              break;
           }
           return $q.reject(rejection);
         }
