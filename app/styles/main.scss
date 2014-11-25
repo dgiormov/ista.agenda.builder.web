@@ -1214,6 +1214,7 @@ body {
 
         position: relative;
         float: left;
+        width: 100%;
 
         &.description-collapsed {
 
@@ -1317,11 +1318,13 @@ body {
         padding: 10px 0px 0px 0px;
         border-top: 1px dashed rgba(0,0,0,0.2);
         float: left;
+        width: 100%;
 
 
         & li {
             float: left;
             padding-bottom: 20px; /* this is here due to multiple speaker scenario */
+            width: 100%;
         }
 
         & .speaker-name {
@@ -1352,6 +1355,7 @@ body {
 
         position: relative;
         float: left;
+        width: 100%;
 
         &.description-collapsed {
 
