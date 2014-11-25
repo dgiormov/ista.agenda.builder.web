@@ -701,18 +701,31 @@ body {
     }
 
     &.session-stats {
-        td div {
+        & td div {
             min-height: 120px;
             font-size: 1em;
         }
 
-        th div {
+        & th div {
             min-height: 75px;
         }
-    }
+        
+        & th div.stats-total {
 
+            min-height: 60px;
+            
+            & .fa {
+                margin-right: 10px;
+            }
+        }
+
+    }
 }
 
+.star-holder { /* due to badly written 'td div' selector above */
+    display: block;
+    color: $highlighter-app;
+}
 
 /* list group headings */
 
