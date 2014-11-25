@@ -550,14 +550,11 @@ body {
         }
 
         &.leader {
-            & .fa {
 
-                color: $highlighter-positive;
-
-                &:before {
-                    content: '\f091';
-                }
+            & .ranking-marker {
+                background-color: $highlighter-positive!important;
             }
+
         }
 
         & > a.list-group-item-holder {
@@ -1820,6 +1817,18 @@ body {
             max-width: 13%!important; /* due to broken inception rule in regular css */
             margin-right: 25px!important; /* due to broken inception rule in regular css */
          }
+    }
+
+    .list-group-item.list-group-ranking .badge {
+        font-size: 35px;
+    }
+
+    .list-group-item h4.list-group-item-heading {
+        font-size: 2.5em;
+    }
+
+    .list-group-item.list-group-ranking .fa {
+        font-size: 1.5em;
     }
 
 
