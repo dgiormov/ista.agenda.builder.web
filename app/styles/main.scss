@@ -1726,7 +1726,7 @@ body {
 @media(min-width:768px) {
 
     .nav.navbar-nav.navbar-right.login {
-        display: block;
+        display: block!important;
     }
 
     body {
