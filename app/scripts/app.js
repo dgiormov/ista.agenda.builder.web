@@ -59,7 +59,11 @@ angular
         templateUrl: 'views/partners.html'
       })
       .otherwise({
-        redirectTo: '/days/27'
+        redirectTo: function() {
+          // set default date
+          var day = new Date().getDate() === 26 ? 26 : 27;
+          return '/days/' + day;
+        }
       });
   })
   .run(function($cookies, $location){
