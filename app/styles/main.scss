@@ -31,6 +31,10 @@ body {
     max-height: none;
 }
 
+.nav.navbar-nav.navbar-right.login {
+    display: none;
+}
+
 .navbar-default {
 
     border: none;
@@ -1114,6 +1118,15 @@ body {
     position: relative;
     border-radius: 0;
 
+    &.digits {
+        
+        background-color: $highlighter-positive;
+
+        & .panel-title {
+            font-size: 2em;
+        }
+    }
+
     &.comments-title {
         background-color: $highlighter-app;
     }
@@ -1711,6 +1724,10 @@ body {
 
 
 @media(min-width:768px) {
+
+    .nav.navbar-nav.navbar-right.login {
+        display: block;
+    }
 
     body {
         overflow-y: scroll;
