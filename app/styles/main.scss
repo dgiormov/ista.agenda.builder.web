@@ -511,6 +511,7 @@ body {
         }
 
         & h4 {
+            max-width: 85%;
             width: auto;
         }
 
@@ -1118,13 +1119,12 @@ body {
     position: relative;
     border-radius: 0;
 
-    &.digits {
-        
+    &.digits-holder {
         background-color: $highlighter-positive;
+    }
 
-        & .panel-title {
-            font-size: 2em;
-        }
+    & .digits {
+        font-size: 2em;
     }
 
     &.comments-title {
