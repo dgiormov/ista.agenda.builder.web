@@ -58,6 +58,10 @@ angular
       .when('/partners', {
         templateUrl: 'views/partners.html'
       })
+      .when('/ranking_public', {
+        templateUrl: 'views/ranking_public.html',
+        controller: 'RankingCtrl'
+      })
       .otherwise({
         redirectTo: function() {
           // set default date
