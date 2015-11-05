@@ -27,25 +27,9 @@ angular
         templateUrl: 'views/sessiondetails.html',
         controller: 'DetailsCtrl'
       })
-      .when('/codes', {
-        templateUrl: 'views/codes.html',
-        controller: 'CodesCtrl'
-      })
-      .when('/ranking', {
-        templateUrl: 'views/ranking.html',
-        controller: 'RankingCtrl'
-      })
       .when('/feedback', {
         templateUrl: 'views/feedback.html',
         controller: 'FeedbackCtrl'
-      })
-      .when('/ranking/:id', {
-        templateUrl: 'views/rankingdetails.html',
-        controller: 'RankingDetailsCtrl'
-      })
-      .when('/achievements', {
-        templateUrl: 'views/achievements.html',
-        controller: 'AchievementsCtrl'
       })
       .when('/top', {
         templateUrl: 'views/topsessions.html',
